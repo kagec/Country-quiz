@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import CityIsCapitalOf from "./CityIsCapitalOf";
 
 export const getRandomInt = (max) => {
   return Math.floor(Math.random() * max);
@@ -44,22 +45,7 @@ const CountryQuiz = () => {
 
   return (
     <div className="quiz-field">
-      <h1 className="quest-sentense">
-        {!countryData ? "" : choseCountry[getRandomInt(4)].capital} is the
-        capital of
-      </h1>
-      <button className="btn-answer">
-        {!countryData ? "" : choseCountry[0].name}
-      </button>
-      <button className="btn-answer">
-        {!countryData ? "" : choseCountry[1].name}
-      </button>
-      <button className="btn-answer">
-        {!countryData ? "" : choseCountry[2].name}
-      </button>
-      <button className="btn-answer">
-        {!countryData ? "" : choseCountry[3].name}
-      </button>
+      <CityIsCapitalOf countryDatas={choseCountry} />
     </div>
   );
 };
