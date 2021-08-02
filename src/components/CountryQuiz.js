@@ -46,8 +46,11 @@ const CountryQuiz = () => {
 
   return (
     <div className="quiz-field">
-      {/* <CityIsCapitalOf countryDatas={choseCountry} /> */}
-      <FlagBelongTo countryDatas={choseCountry} />
+      {!getRandomInt(2) ? (
+        <CityIsCapitalOf countryDatas={choseCountry} />
+      ) : (
+        <FlagBelongTo countryDatas={choseCountry} />
+      )}
     </div>
   );
 };
