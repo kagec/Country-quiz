@@ -8,7 +8,6 @@ export const getRandomInt = (max) => {
 
 const CountryQuiz = () => {
   const [countryData, setCountryData] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const fetchCountryData = async () => {
@@ -17,7 +16,6 @@ const CountryQuiz = () => {
           "https://restcountries.eu/rest/v2/all?fields=name;capital;flag;"
         );
 
-        setIsLoaded(true);
         setCountryData(data);
       } catch (e) {
         alert(e);
