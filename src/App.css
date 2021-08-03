@@ -17,7 +17,7 @@ header {
 }
 
 .btn-answer {
-  margin: 10px 25px;
+  margin: 10px 25px 10px 0;
   width: 250px;
   height: 40px;
   border-radius: 10px;
