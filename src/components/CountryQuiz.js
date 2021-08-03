@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import CityIsCapitalOf from "./CityIsCapitalOf";
-import FlagBelongTo from "./FlagBelongTo";
+import { CityIsCapitalOf, FlagBelongTo } from "./Quiz";
 
 export const getRandomInt = (max) => {
   return Math.floor(Math.random() * max);
