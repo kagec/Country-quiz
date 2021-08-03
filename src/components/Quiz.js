@@ -6,7 +6,7 @@ export const FlagBelongTo = ({ countryDatas }) => {
     <div>
       <img
         className="img"
-        src={!countryDatas ? null : countryDatas[getRandomInt(4)].flag}
+        src={countryDatas[getRandomInt(4)].flag}
         alt="flag"
       />
       <h1 className="quest-sentense">
@@ -24,8 +24,7 @@ export const CityIsCapitalOf = ({ countryDatas }) => {
   return (
     <div>
       <h1 className="quest-sentense">
-        {!countryDatas ? "" : countryDatas[getRandomInt(4)].capital} is the
-        capital of
+        {countryDatas[getRandomInt(4)].capital} is the capital of
       </h1>
 
       <ol>
