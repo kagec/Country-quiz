@@ -8,6 +8,7 @@ export const getRandomInt = (max) => {
 
 const CountryQuiz = () => {
   const [countryData, setCountryData] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const fetchCountryData = async () => {
@@ -16,6 +17,7 @@ const CountryQuiz = () => {
           "https://restcountries.eu/rest/v2/all?fields=name;capital;flag;"
         );
 
+        setIsLoaded(true);
         setCountryData(data);
       } catch (e) {
         alert(e);
@@ -45,7 +47,9 @@ const CountryQuiz = () => {
 
   return (
     <div className="quiz-field">
-      {!getRandomInt(2) ? (
+      {!isLoaded ? (
+        <div>Loading...</div>
+      ) : !getRandomInt(2) ? (
         <CityIsCapitalOf countryDatas={choseCountry} />
       ) : (
         <FlagBelongTo countryDatas={choseCountry} />
