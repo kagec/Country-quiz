@@ -23,6 +23,10 @@ header {
   border-radius: 10px;
 }
 
+.btn-answer:hover {
+  background-color: rgba(217, 255, 0, 0.801);
+}
+
 .img {
   margin-top: 25px;
   margin-left: 25px;
