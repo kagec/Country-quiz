@@ -47,7 +47,7 @@ const CountryQuiz = () => {
 
   return (
     <div className="quiz-field">
-      {!isLoaded ? (
+      {countryData === null ? (
         <div className="load">Loading...</div>
       ) : !getRandomInt(2) ? (
         <CityIsCapitalOf countryDatas={choseCountry} />
