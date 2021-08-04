@@ -10,7 +10,6 @@ const AnswerList = ({ countryDatas, answer }) => {
     });
   }
 
-  console.log(countryDatas);
   return (
     <>
       {countryDatas.map((data, index) => (
