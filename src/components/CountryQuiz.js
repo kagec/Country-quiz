@@ -41,7 +41,6 @@ const CountryQuiz = () => {
   };
 
   const choseCountry = chooseCountry();
-  console.log(countryData);
 
   return (
     <div className="quiz-field">
