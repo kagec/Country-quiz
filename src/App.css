@@ -23,6 +23,10 @@ header {
   border-radius: 10px;
 }
 
+.correct[aria-pressed="true"] {
+  background-color: rgb(53, 161, 53);
+}
+
 .btn-answer:hover {
   background-color: rgba(217, 255, 0, 0.801);
 }
