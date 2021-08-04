@@ -4,6 +4,11 @@ import { getRandomInt } from "./CountryQuiz";
 export const FlagBelongTo = ({ countryDatas }) => {
   const answerNum = getRandomInt(4);
 
+  countryDatas.map((data, index) => {
+    data.isCorrect = answerNum === index ? true : false;
+    return data;
+  });
+
   return (
     <div>
       <img className="img" src={countryDatas[answerNum].flag} alt="flag" />
@@ -20,6 +25,11 @@ export const FlagBelongTo = ({ countryDatas }) => {
 
 export const CityIsCapitalOf = ({ countryDatas }) => {
   const answerNum = getRandomInt(4);
+
+  countryDatas.map((data, index) => {
+    data.isCorrect = answerNum === index ? true : false;
+    return data;
+  });
 
   return (
     <div>
