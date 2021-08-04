@@ -19,7 +19,7 @@ const AnswerList = ({ countryDatas, answer }) => {
             className={`btn-answer ${
               data.isCorrect
                 ? "correct"
-                : data.isCorrect === false && data.isPressed === true
+                : data.isCorrect === false && data.isPressed
                 ? "incorrect"
                 : ""
             } `}
