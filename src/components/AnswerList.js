@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-const AnswerList = ({ countryDatas }) => {
+const AnswerList = ({
+  countryDatas,
+  clearCount,
+  setClearCount,
+  setIsWrong,
+}) => {
   const [isPressed, setIsPressed] = useState(false);
 
   return (
@@ -18,7 +23,12 @@ const AnswerList = ({ countryDatas }) => {
             aria-pressed={isPressed}
             onClick={() => {
               data.isPressed = true;
-              setIsPressed(!isPressed);
+              setIsPressed(true);
+              if (data.isPressed && data.isCorrect) {
+                setClearCount(clearCount + 1);
+              } else {
+                setIsWrong(true);
+              }
             }}
           >
             {data.name}
