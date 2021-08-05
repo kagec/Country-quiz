@@ -3,13 +3,6 @@ import { useState } from "react";
 const AnswerList = ({ countryDatas }) => {
   const [isPressed, setIsPressed] = useState(false);
 
-  if (!isPressed) {
-    countryDatas.map((data) => {
-      data.isPressed = false;
-      return data;
-    });
-  }
-
   return (
     <>
       {countryDatas.map((data, index) => (
