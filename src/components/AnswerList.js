@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+const sleep = async (ms) => new Promise((r) => setTimeout(r, ms));
+
 const AnswerList = ({
   countryDatas,
   clearCount,
@@ -21,9 +23,11 @@ const AnswerList = ({
                 : ""
             } `}
             aria-pressed={isPressed}
-            onClick={() => {
+            onClick={async () => {
               data.isPressed = true;
               setIsPressed(true);
+              await sleep(1000);
+              setIsPressed(false);
               if (data.isPressed && data.isCorrect) {
                 setClearCount(clearCount + 1);
               } else {
