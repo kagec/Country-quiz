@@ -1,9 +1,6 @@
 import AnswerList from "./AnswerList";
-import { getRandomInt } from "./CountryQuiz";
 
-export const FlagBelongTo = ({ countryDatas }) => {
-  const answerNum = getRandomInt(4);
-
+export const FlagBelongTo = ({ countryDatas, answerNum }) => {
   countryDatas.map((data, index) => {
     data.isCorrect = answerNum === index ? true : false;
     return data;
@@ -23,9 +20,7 @@ export const FlagBelongTo = ({ countryDatas }) => {
   );
 };
 
-export const CityIsCapitalOf = ({ countryDatas }) => {
-  const answerNum = getRandomInt(4);
-
+export const CityIsCapitalOf = ({ countryDatas, answerNum }) => {
   countryDatas.map((data, index) => {
     data.isCorrect = answerNum === index ? true : false;
     return data;

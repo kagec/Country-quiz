@@ -44,15 +44,16 @@ const CountryQuiz = () => {
   };
 
   const choseCountry = chooseCountry();
+  const answerNum = getRandomInt(4);
 
   return (
     <div className="quiz-field">
       {countryData === null ? (
         <div className="load">Loading...</div>
       ) : !getRandomInt(2) ? (
-        <CityIsCapitalOf countryDatas={choseCountry} />
+        <CityIsCapitalOf countryDatas={choseCountry} answerNum={answerNum} />
       ) : (
-        <FlagBelongTo countryDatas={choseCountry} />
+        <FlagBelongTo countryDatas={choseCountry} answerNum={answerNum} />
       )}
     </div>
   );
