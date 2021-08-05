@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AnswerList = ({ countryDatas, answer }) => {
+const AnswerList = ({ countryDatas }) => {
   const [isPressed, setIsPressed] = useState(false);
 
   if (!isPressed) {
