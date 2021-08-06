@@ -3,8 +3,8 @@ import { useState } from "react";
 const AnswerList = ({ countryDatas }) => {
   const [isPressed, setIsPressed] = useState(false);
 
-  return countryDatas.map((data, index) => (
-    <li key={index}>
+  return countryDatas.map((data) => (
+    <li>
       <button
         className={`btn-answer ${
           data.isCorrect
