@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { CityIsCapitalOf, FlagBelongTo } from "./Quiz";
+import Quiz from "./Quiz";
 
 export const getRandomInt = (max) => {
   return Math.floor(Math.random() * max);
@@ -50,10 +50,8 @@ const CountryQuiz = () => {
     <div className="quiz-field">
       {countryData === null ? (
         <div className="load">Loading...</div>
-      ) : !getRandomInt(2) ? (
-        <CityIsCapitalOf countryDatas={choseCountry} answerNum={answerNum} />
       ) : (
-        <FlagBelongTo countryDatas={choseCountry} answerNum={answerNum} />
+        <Quiz countryDatas={choseCountry} answerNum={answerNum} />
       )}
     </div>
   );
