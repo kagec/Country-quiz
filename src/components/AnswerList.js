@@ -1,13 +1,6 @@
 import { useState } from "react";
 
-const sleep = async (ms) => new Promise((r) => setTimeout(r, ms));
-
-const AnswerList = ({
-  countryDatas,
-  clearCount,
-  setClearCount,
-  setIsWrong,
-}) => {
+const AnswerList = ({ countryDatas }) => {
   const [isPressed, setIsPressed] = useState(false);
 
   return (
@@ -26,13 +19,6 @@ const AnswerList = ({
             onClick={async () => {
               data.isPressed = true;
               setIsPressed(true);
-              await sleep(1000);
-              setIsPressed(false);
-              if (data.isPressed && data.isCorrect) {
-                setClearCount(clearCount + 1);
-              } else {
-                setIsWrong(true);
-              }
             }}
           >
             {data.name}

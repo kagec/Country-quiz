@@ -1,12 +1,6 @@
 import AnswerList from "./AnswerList";
 
-export const FlagBelongTo = ({
-  countryDatas,
-  answerNum,
-  clearCount,
-  setClearCount,
-  setIsWrong,
-}) => {
+export const FlagBelongTo = ({ countryDatas, answerNum }) => {
   countryDatas.map((data, index) => {
     data.isCorrect = answerNum === index ? true : false;
     return data;
@@ -20,24 +14,13 @@ export const FlagBelongTo = ({
       </h1>
 
       <ol>
-        <AnswerList
-          countryDatas={countryDatas}
-          clearCount={clearCount}
-          setClearCount={setClearCount}
-          setIsWrong={setIsWrong}
-        />
+        <AnswerList countryDatas={countryDatas} />
       </ol>
     </div>
   );
 };
 
-export const CityIsCapitalOf = ({
-  countryDatas,
-  answerNum,
-  clearCount,
-  setClearCount,
-  setIsWrong,
-}) => {
+export const CityIsCapitalOf = ({ countryDatas, answerNum }) => {
   countryDatas.map((data, index) => {
     data.isCorrect = answerNum === index ? true : false;
     return data;
@@ -50,12 +33,7 @@ export const CityIsCapitalOf = ({
       </h1>
 
       <ol>
-        <AnswerList
-          countryDatas={countryDatas}
-          clearCount={clearCount}
-          setClearCount={setClearCount}
-          setIsWrong={setIsWrong}
-        />
+        <AnswerList countryDatas={countryDatas} />
       </ol>
     </div>
   );

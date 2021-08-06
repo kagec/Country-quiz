@@ -8,10 +8,7 @@ export const getRandomInt = (max) => {
 
 const CountryQuiz = () => {
   const [countryData, setCountryData] = useState(null);
-  const [clearCount, setClearCount] = useState(0);
-  const [isWrong, setIsWrong] = useState(false);
 
-  console.log(clearCount);
   useEffect(() => {
     const fetchCountryData = async () => {
       try {
@@ -54,21 +51,9 @@ const CountryQuiz = () => {
       {countryData === null ? (
         <div className="load">Loading...</div>
       ) : !getRandomInt(2) ? (
-        <CityIsCapitalOf
-          countryDatas={choseCountry}
-          answerNum={answerNum}
-          clearCount={clearCount}
-          setClearCount={setClearCount}
-          setIsWrong={setIsWrong}
-        />
+        <CityIsCapitalOf countryDatas={choseCountry} answerNum={answerNum} />
       ) : (
-        <FlagBelongTo
-          countryDatas={choseCountry}
-          answerNum={answerNum}
-          clearCount={clearCount}
-          setClearCount={setClearCount}
-          setIsWrong={setIsWrong}
-        />
+        <FlagBelongTo countryDatas={choseCountry} answerNum={answerNum} />
       )}
     </div>
   );
