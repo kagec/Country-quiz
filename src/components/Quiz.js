@@ -11,9 +11,7 @@ const Quiz = ({ countryDatas, answerNum }) => {
     return (
       <div>
         <img className="img" src={countryDatas[answerNum].flag} alt="flag" />
-        <h1 className="quest-sentense">
-          Which country does this flag belong to?
-        </h1>
+        <h1 className="question">Which country does this flag belong to?</h1>
 
         <ol>
           <AnswerList countryDatas={countryDatas} />
@@ -30,7 +28,7 @@ const Quiz = ({ countryDatas, answerNum }) => {
 
     return (
       <div>
-        <h1 className="quest-sentense">
+        <h1 className="question">
           {countryDatas[answerNum].capital} is the capital of
         </h1>
 
