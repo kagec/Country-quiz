@@ -11,7 +11,7 @@ const AnswerList = ({
   const [isPressed, setIsPressed] = useState(false);
 
   return (
-    <>
+    <div>
       {countryDatas.map((data, index) => (
         <li key={index}>
           <button
@@ -39,7 +39,7 @@ const AnswerList = ({
           </button>
         </li>
       ))}
-    </>
+    </div>
   );
 };
 
