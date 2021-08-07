@@ -27,11 +27,11 @@ header {
   background-color: rgba(217, 255, 0, 0.801);
 }
 
-.incorrect[aria-pressed="true"] {
+.incorrect {
   background-color: red;
 }
 
-.correct[aria-pressed="true"] {
+.correct {
   background-color: rgb(53, 161, 53);
 }
 
