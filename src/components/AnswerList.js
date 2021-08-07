@@ -14,7 +14,7 @@ const AnswerList = ({ countryDatas }) => {
             : ""
         } `}
         aria-pressed={isPressed}
-        onClick={async () => {
+        onClick={() => {
           data.isPressed = true;
           setIsPressed(true);
         }}
