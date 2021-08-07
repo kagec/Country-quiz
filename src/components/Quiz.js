@@ -25,7 +25,7 @@ const Quiz = ({ countryDatas, answerNum }) => {
     <div>
       {QUIZ_LIST[questionType]({ countryDatas, answerNum })}
       <ol>
-        <AnswerList countryDatas={countryDatas} />
+        <AnswerList countryDatas={countryDatas} answerNum={answerNum} />
       </ol>
     </div>
   );

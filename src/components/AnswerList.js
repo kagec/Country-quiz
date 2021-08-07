@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AnswerList = ({ countryDatas }) => {
+const AnswerList = ({ countryDatas, answerNum }) => {
   const [isPressed, setIsPressed] = useState(false);
 
   return countryDatas.map((data) => (
