@@ -1,51 +1,32 @@
 import AnswerList from "./AnswerList";
 import { getRandomInt } from "./CountryQuiz";
 
+const QUIZ_LIST = {
+  FlagBelongTo: ({ countryDatas, answerNum }) => (
+    <div>
+      <img src={countryDatas[answerNum].flag} alt="flag" className="img" />
+      <h1 className="question">Which country does this flag belong to?</h1>
+    </div>
+  ),
+  CityIsCapitalOf: ({ countryDatas, answerNum }) => (
+    <h1 className="question">
+      {countryDatas[answerNum].capital} is the capital of
+    </h1>
+  ),
+};
+
+const QUIZ_NAME = Object.keys(QUIZ_LIST);
+const QUIZ_LENGTH = QUIZ_NAME.length;
+
 const Quiz = ({ countryDatas, answerNum }) => {
-  const FlagBelongTo = ({ countryDatas, answerNum }) => {
-    countryDatas.map((data, index) => {
-      data.isCorrect = answerNum === index ? true : false;
-      return data;
-    });
-
-    return (
-      <div>
-        <img className="img" src={countryDatas[answerNum].flag} alt="flag" />
-        <h1 className="question">Which country does this flag belong to?</h1>
-
-        <ol>
-          <AnswerList countryDatas={countryDatas} />
-        </ol>
-      </div>
-    );
-  };
-
-  const CityIsCapitalOf = ({ countryDatas, answerNum }) => {
-    countryDatas.map((data, index) => {
-      data.isCorrect = answerNum === index ? true : false;
-      return data;
-    });
-
-    return (
-      <div>
-        <h1 className="question">
-          {countryDatas[answerNum].capital} is the capital of
-        </h1>
-
-        <ol>
-          <AnswerList countryDatas={countryDatas} />
-        </ol>
-      </div>
-    );
-  };
+  const questionType = QUIZ_NAME[getRandomInt(QUIZ_LENGTH)];
 
   return (
     <div>
-      {!getRandomInt(2) ? (
-        <CityIsCapitalOf countryDatas={countryDatas} answerNum={answerNum} />
-      ) : (
-        <FlagBelongTo countryDatas={countryDatas} answerNum={answerNum} />
-      )}
+      {QUIZ_LIST[questionType]({ countryDatas, answerNum })}
+      <ol>
+        <AnswerList countryDatas={countryDatas} />
+      </ol>
     </div>
   );
 };
