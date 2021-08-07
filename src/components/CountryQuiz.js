@@ -34,13 +34,13 @@ const CountryQuiz = () => {
     const countryDataLength = countryData.length;
 
     while (chooseData.size < 4) {
-      chooseData.add(countryData[getRandomInt(countryDataLength)]);
+      chooseData.add({
+        ...countryData[getRandomInt(countryDataLength)],
+        isPressed: false,
+      });
     }
 
-    return [...chooseData].map((data) => {
-      data.isPressed = false;
-      return data;
-    });
+    return [...chooseData];
   };
 
   const choseCountry = chooseCountry();
