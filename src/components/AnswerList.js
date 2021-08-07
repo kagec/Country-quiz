@@ -7,9 +7,11 @@ const AnswerList = ({ countryDatas, answerNum }) => {
     <li key={index}>
       <button
         className={`btn-answer ${
-          data.isCorrect
+          !isPressed
+            ? ""
+            : index === answerNum
             ? "correct"
-            : data.isCorrect === false && data.isPressed
+            : data.isPressed
             ? "incorrect"
             : ""
         } `}
