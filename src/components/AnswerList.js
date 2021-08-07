@@ -13,7 +13,6 @@ const AnswerList = ({ countryDatas, answerNum }) => {
             ? "incorrect"
             : ""
         } `}
-        aria-pressed={isPressed}
         onClick={() => {
           data.isPressed = true;
           setIsPressed(true);
