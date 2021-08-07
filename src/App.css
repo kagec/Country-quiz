@@ -28,11 +28,11 @@ header {
 }
 
 .incorrect {
-  background-color: red;
+  background-color: red !important;
 }
 
 .correct {
-  background-color: rgb(53, 161, 53);
+  background-color: rgb(53, 161, 53) !important ;
 }
 
 .img {
