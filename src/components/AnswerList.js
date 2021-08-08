@@ -6,15 +6,11 @@ const AnswerList = ({ countryDatas, answerNum }) => {
   return countryDatas.map((data, index) => (
     <li key={index}>
       <button
-        className={`btn-answer ${
-          !isPressed
-            ? ""
-            : index === answerNum
-            ? "correct"
-            : data.isPressed
-            ? "incorrect"
-            : ""
-        } `}
+        className={`btn-answer 
+        ${isPressed && index === answerNum ? "correct" : ""}
+        ${data.isPressed && index !== answerNum ? "incorrect" : ""}
+
+         `}
         onClick={() => {
           data.isPressed = true;
           setIsPressed(true);
