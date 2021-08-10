@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { CityIsCapitalOf, FlagBelongTo } from "./Quiz";
+import Quiz from "./Quiz";
 
 export const getRandomInt = (max) => {
   return Math.floor(Math.random() * max);
@@ -37,20 +37,22 @@ const CountryQuiz = () => {
       chooseData.add(countryData[getRandomInt(countryDataLength)]);
     }
 
+    chooseData.forEach((data) => {
+      data.isPressed = false;
+    });
+
     return [...chooseData];
   };
 
   const choseCountry = chooseCountry();
-  console.log(countryData);
+  const answerNum = getRandomInt(4);
 
   return (
     <div className="quiz-field">
       {countryData === null ? (
         <div className="load">Loading...</div>
-      ) : !getRandomInt(2) ? (
-        <CityIsCapitalOf countryDatas={choseCountry} />
       ) : (
-        <FlagBelongTo countryDatas={choseCountry} />
+        <Quiz countryDatas={choseCountry} answerNum={answerNum} />
       )}
     </div>
   );

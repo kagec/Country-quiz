@@ -10,7 +10,7 @@ header {
   border-radius: 25px;
 }
 
-.quest-sentense {
+.question {
   color: purple;
   text-align: center;
   overflow-wrap: break-word;
@@ -23,6 +23,18 @@ header {
   border-radius: 10px;
 }
 
+.btn-answer:hover {
+  background-color: rgba(217, 255, 0, 0.801);
+}
+
+.incorrect {
+  background-color: red !important;
+}
+
+.correct {
+  background-color: rgb(53, 161, 53) !important ;
+}
+
 .img {
   margin-top: 25px;
   margin-left: 25px;
@@ -33,4 +45,8 @@ header {
 .load {
   text-align: center;
   font-size: x-large;
+}
+
+.icon {
+  right: 20px;
 }

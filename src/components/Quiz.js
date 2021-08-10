@@ -1,35 +1,34 @@
 import AnswerList from "./AnswerList";
 import { getRandomInt } from "./CountryQuiz";
 
-export const FlagBelongTo = ({ countryDatas }) => {
+const QUIZ_LIST = {
+  FlagBelongTo: ({ countryDatas, answerNum }) => (
+    <div>
+      <img src={countryDatas[answerNum].flag} alt="flag" className="img" />
+      <h1 className="question">Which country does this flag belong to?</h1>
+    </div>
+  ),
+  CityIsCapitalOf: ({ countryDatas, answerNum }) => (
+    <h1 className="question">
+      {countryDatas[answerNum].capital} is the capital of
+    </h1>
+  ),
+};
+
+const QUIZ_NAME = Object.keys(QUIZ_LIST);
+const QUIZ_LENGTH = QUIZ_NAME.length;
+
+const Quiz = ({ countryDatas, answerNum }) => {
+  const questionType = QUIZ_NAME[getRandomInt(QUIZ_LENGTH)];
+
   return (
     <div>
-      <img
-        className="img"
-        src={countryDatas[getRandomInt(4)].flag}
-        alt="flag"
-      />
-      <h1 className="quest-sentense">
-        Which country does this flag belong to?
-      </h1>
-
+      {QUIZ_LIST[questionType]({ countryDatas, answerNum })}
       <ol>
-        <AnswerList countryDatas={countryDatas} />
+        <AnswerList countryDatas={countryDatas} answerNum={answerNum} />
       </ol>
     </div>
   );
 };
 
-export const CityIsCapitalOf = ({ countryDatas }) => {
-  return (
-    <div>
-      <h1 className="quest-sentense">
-        {countryDatas[getRandomInt(4)].capital} is the capital of
-      </h1>
-
-      <ol>
-        <AnswerList countryDatas={countryDatas} />
-      </ol>
-    </div>
-  );
-};
+export default Quiz;
