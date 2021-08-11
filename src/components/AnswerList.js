@@ -1,8 +1,10 @@
-import { useState } from "react";
-
-const AnswerList = ({ countryDatas, answerNum, setIsAnswered }) => {
-  const [isPressed, setIsPressed] = useState(false);
-
+const AnswerList = ({
+  countryDatas,
+  answerNum,
+  setIsAnswered,
+  isPressed,
+  setIsPressed,
+}) => {
   return countryDatas.map((data, index) => (
     <li key={index}>
       <button

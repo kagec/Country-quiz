@@ -24,6 +24,7 @@ const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
   const [questionType, setQuestionType] = useState(
     QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]
   );
+  const [isPressed, setIsPressed] = useState(false);
 
   const onClick = () => {
     const dataIndex = countryDatas.findIndex((data) => data.isPressed === true);
@@ -42,6 +43,8 @@ const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
           countryDatas={countryDatas}
           answerNum={answerNum}
           setIsAnswered={setIsAnswered}
+          isPressed={isPressed}
+          setIsPressed={setIsPressed}
         />
       </ol>
       {!isAnswered ? null : (
