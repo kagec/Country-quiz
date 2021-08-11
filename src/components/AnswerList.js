@@ -12,9 +12,11 @@ const AnswerList = ({ countryDatas, answerNum, setIsAnswered }) => {
 
          `}
         onClick={() => {
-          data.isPressed = true;
-          setIsPressed(true);
-          setIsAnswered(true);
+          if (!isPressed) {
+            data.isPressed = true;
+            setIsPressed(true);
+            setIsAnswered(true);
+          }
         }}
       >
         {data.name}
