@@ -29,6 +29,7 @@ const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
   const onClick = () => {
     const dataIndex = countryDatas.findIndex((data) => data.isPressed === true);
     setIsAnswered(false);
+    setIsPressed(false);
 
     if (answerNum === dataIndex) {
       setScoreCount(scoreCount + 1);
