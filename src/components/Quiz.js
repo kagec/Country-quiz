@@ -1,3 +1,4 @@
+import { useState } from "react";
 import AnswerList from "./AnswerList";
 import { getRandomInt } from "./CountryQuiz";
 
@@ -20,12 +21,17 @@ const QUIZ_LENGTH = QUIZ_NAME.length;
 
 const Quiz = ({ countryDatas, answerNum }) => {
   const questionType = QUIZ_NAME[getRandomInt(QUIZ_LENGTH)];
+  const [isAnswered, setIsAnswered] = useState(false);
 
   return (
     <div>
       {QUIZ_LIST[questionType]({ countryDatas, answerNum })}
       <ol>
-        <AnswerList countryDatas={countryDatas} answerNum={answerNum} />
+        <AnswerList
+          countryDatas={countryDatas}
+          answerNum={answerNum}
+          setIsAnswered={setIsAnswered}
+        />
       </ol>
     </div>
   );

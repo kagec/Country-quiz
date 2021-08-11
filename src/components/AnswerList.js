@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AnswerList = ({ countryDatas, answerNum }) => {
+const AnswerList = ({ countryDatas, answerNum, setIsAnswered }) => {
   const [isPressed, setIsPressed] = useState(false);
 
   return countryDatas.map((data, index) => (
@@ -14,6 +14,7 @@ const AnswerList = ({ countryDatas, answerNum }) => {
         onClick={() => {
           data.isPressed = true;
           setIsPressed(true);
+          setIsAnswered(true);
         }}
       >
         {data.name}
