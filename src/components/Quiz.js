@@ -20,8 +20,10 @@ const QUIZ_NAME = Object.keys(QUIZ_LIST);
 const QUIZ_LENGTH = QUIZ_NAME.length;
 
 const Quiz = ({ countryDatas, answerNum }) => {
-  const questionType = QUIZ_NAME[getRandomInt(QUIZ_LENGTH)];
   const [isAnswered, setIsAnswered] = useState(false);
+  const [questionType, setQuestionType] = useState(
+    QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]
+  );
 
   return (
     <div>
