@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AnswerList from "./AnswerList";
 import { getRandomInt } from "./CountryQuiz";
+import Result from "./Result";
 
 const QUIZ_LIST = {
   FlagBelongTo: ({ countryDatas, answerNum }) => (
@@ -39,7 +40,9 @@ const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
     }
   };
 
-  return (
+  return isMiss ? (
+    <Result scoreCount={scoreCount} />
+  ) : (
     <div>
       {QUIZ_LIST[questionType]({ countryDatas, answerNum })}
       <ol>
