@@ -25,6 +25,7 @@ const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
     QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]
   );
   const [isPressed, setIsPressed] = useState(false);
+  const [isMiss, setIsMiss] = useState(false);
 
   const onClick = () => {
     const dataIndex = countryDatas.findIndex((data) => data.isPressed === true);
@@ -33,6 +34,8 @@ const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
 
     if (answerNum === dataIndex) {
       setScoreCount(scoreCount + 1);
+    } else {
+      setIsMiss(true);
     }
   };
 
