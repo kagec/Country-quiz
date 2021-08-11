@@ -19,11 +19,20 @@ const QUIZ_LIST = {
 const QUIZ_NAME = Object.keys(QUIZ_LIST);
 const QUIZ_LENGTH = QUIZ_NAME.length;
 
-const Quiz = ({ countryDatas, answerNum }) => {
+const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
   const [isAnswered, setIsAnswered] = useState(false);
   const [questionType, setQuestionType] = useState(
     QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]
   );
+
+  const onClick = () => {
+    const dataIndex = countryDatas.findIndex((data) => data.isPressed === true);
+    setIsAnswered(false);
+
+    if (answerNum === dataIndex) {
+      setScoreCount(scoreCount + 1);
+    }
+  };
 
   return (
     <div>
@@ -35,7 +44,11 @@ const Quiz = ({ countryDatas, answerNum }) => {
           setIsAnswered={setIsAnswered}
         />
       </ol>
-      {!isAnswered ? null : <button className="btn-next">NEXT</button>}
+      {!isAnswered ? null : (
+        <button className="btn-next" onClick={() => onClick()}>
+          NEXT
+        </button>
+      )}
     </div>
   );
 };
