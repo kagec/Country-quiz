@@ -35,6 +35,7 @@ const Quiz = ({ countryDatas, answerNum }) => {
           setIsAnswered={setIsAnswered}
         />
       </ol>
+      {!isAnswered ? null : <button className="btn-next">NEXT</button>}
     </div>
   );
 };
