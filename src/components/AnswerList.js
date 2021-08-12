@@ -9,7 +9,6 @@ const AnswerList = ({ countryDatas, answerNum, setIsAnswered, isAnswered }) => {
          `}
         onClick={() => {
           if (isAnswered === null) {
-            data.isPressed = true;
             setIsAnswered(index);
           }
         }}

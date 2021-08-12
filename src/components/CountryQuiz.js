@@ -38,10 +38,6 @@ const CountryQuiz = () => {
       chooseData.add(countryData[getRandomInt(countryDataLength)]);
     }
 
-    chooseData.forEach((data) => {
-      data.isPressed = false;
-    });
-
     return [...chooseData];
   };
 
