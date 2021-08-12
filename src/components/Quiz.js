@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AnswerList from "./AnswerList";
 import { getRandomInt } from "./CountryQuiz";
 import Result from "./Result";
@@ -26,6 +26,10 @@ const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
     QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]
   );
   const [showResult, setShowResult] = useState(false);
+
+  useEffect(() => {
+    setQuestionType(QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]);
+  }, [scoreCount]);
 
   const onClick = () => {
     setIsAnswered(null);
