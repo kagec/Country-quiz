@@ -1,22 +1,15 @@
-const AnswerList = ({
-  countryDatas,
-  answerNum,
-  setIsAnswered,
-  isPressed,
-  setIsPressed,
-}) => {
+const AnswerList = ({ countryDatas, answerNum, setIsAnswered, isAnswered }) => {
   return countryDatas.map((data, index) => (
     <li key={index}>
       <button
         className={`btn-answer 
-        ${isPressed && index === answerNum ? "correct" : ""}
-        ${data.isPressed && index !== answerNum ? "incorrect" : ""}
+        ${isAnswered !== null && index === answerNum ? "correct" : ""}
+        ${isAnswered === index && index !== answerNum ? "incorrect" : ""}
 
          `}
         onClick={() => {
-          if (!isPressed) {
+          if (isAnswered === null) {
             data.isPressed = true;
-            setIsPressed(true);
             setIsAnswered(index);
           }
         }}
