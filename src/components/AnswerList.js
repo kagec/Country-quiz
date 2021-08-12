@@ -4,7 +4,7 @@ const AnswerList = ({ countryDatas, answerNum, setIsAnswered, isAnswered }) => {
       <button
         className={`btn-answer 
         ${isAnswered !== null && index === answerNum ? "correct" : ""}
-        ${isAnswered === index && index !== answerNum ? "incorrect" : ""}
+        ${isAnswered === index ? "incorrect" : ""}
 
          `}
         onClick={() => {
