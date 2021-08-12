@@ -25,7 +25,7 @@ const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
   const [questionType, setQuestionType] = useState(
     QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]
   );
-  const [isMiss, setIsMiss] = useState(false);
+  const [showResult, setShowResult] = useState(false);
 
   const onClick = () => {
     setIsAnswered(null);
@@ -33,11 +33,11 @@ const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
     if (answerNum === isAnswered) {
       setScoreCount(scoreCount + 1);
     } else {
-      setIsMiss(true);
+      setShowResult(true);
     }
   };
 
-  return isMiss ? (
+  return showResult ? (
     <Result scoreCount={scoreCount} />
   ) : (
     <div>
