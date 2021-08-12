@@ -17,7 +17,7 @@ const AnswerList = ({
           if (!isPressed) {
             data.isPressed = true;
             setIsPressed(true);
-            setIsAnswered(true);
+            setIsAnswered(index);
           }
         }}
       >
