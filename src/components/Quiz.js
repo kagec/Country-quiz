@@ -54,11 +54,9 @@ const Quiz = ({ countryDatas, correctNumber, scoreCount, setScoreCount }) => {
           answerIndex={answerIndex}
         />
       </ol>
-      {answerIndex === null ? null : (
-        <button className="btn-next" onClick={() => onClick()}>
-          NEXT
-        </button>
-      )}
+      <button className="btn-next" onClick={() => onClick()}>
+        NEXT
+      </button>
     </div>
   );
 };
