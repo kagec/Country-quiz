@@ -1,8 +1,14 @@
-const Result = ({ scoreCount }) => {
+const Result = ({ scoreCount, setScoreCount, setShowResult }) => {
+  const onClick = () => {
+    setShowResult(false);
+    setScoreCount(0);
+  };
+
   return (
     <div>
       <h2>Results</h2>
       <p>You got {scoreCount} correct answer</p>
+      <button onClick={() => onClick()}>Try again</button>
     </div>
   );
 };

@@ -42,7 +42,11 @@ const Quiz = ({ countryDatas, correctNumber, scoreCount, setScoreCount }) => {
   };
 
   return showResult ? (
-    <Result scoreCount={scoreCount} />
+    <Result
+      scoreCount={scoreCount}
+      setScoreCount={setScoreCount}
+      setShowResult={setShowResult}
+    />
   ) : (
     <div>
       {QUIZ_LIST[questionType]({ countryDatas, correctNumber })}
