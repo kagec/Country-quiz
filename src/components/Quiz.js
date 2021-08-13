@@ -21,7 +21,7 @@ const QUIZ_NAME = Object.keys(QUIZ_LIST);
 const QUIZ_LENGTH = QUIZ_NAME.length;
 
 const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
-  const [isAnswered, setIsAnswered] = useState(null);
+  const [answerIndex, setAnswerIndex] = useState(null);
   const [questionType, setQuestionType] = useState(
     QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]
   );
@@ -32,9 +32,9 @@ const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
   }, [scoreCount]);
 
   const onClick = () => {
-    setIsAnswered(null);
+    setAnswerIndex(null);
 
-    if (answerNum === isAnswered) {
+    if (answerNum === answerIndex) {
       setScoreCount(scoreCount + 1);
     } else {
       setShowResult(true);
@@ -50,11 +50,11 @@ const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
         <AnswerList
           countryDatas={countryDatas}
           answerNum={answerNum}
-          setIsAnswered={setIsAnswered}
-          isAnswered={isAnswered}
+          setAnswerIndex={setAnswerIndex}
+          answerIndex={answerIndex}
         />
       </ol>
-      {isAnswered === null ? null : (
+      {answerIndex === null ? null : (
         <button className="btn-next" onClick={() => onClick()}>
           NEXT
         </button>
