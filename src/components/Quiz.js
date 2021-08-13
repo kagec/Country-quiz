@@ -38,6 +38,9 @@ const Quiz = ({ countryDatas, correctNumber, scoreCount, setScoreCount }) => {
       setScoreCount(scoreCount + 1);
     } else {
       setShowResult(true);
+      if (scoreCount === 0) {
+        setScoreCount(-1);
+      }
     }
   };
 
