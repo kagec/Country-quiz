@@ -4,15 +4,15 @@ import { getRandomInt } from "./CountryQuiz";
 import Result from "./Result";
 
 const QUIZ_LIST = {
-  FlagBelongTo: ({ countryDatas, answerNum }) => (
+  FlagBelongTo: ({ countryDatas, correctNumber }) => (
     <div>
-      <img src={countryDatas[answerNum].flag} alt="flag" className="img" />
+      <img src={countryDatas[correctNumber].flag} alt="flag" className="img" />
       <h1 className="question">Which country does this flag belong to?</h1>
     </div>
   ),
-  CityIsCapitalOf: ({ countryDatas, answerNum }) => (
+  CityIsCapitalOf: ({ countryDatas, correctNumber }) => (
     <h1 className="question">
-      {countryDatas[answerNum].capital} is the capital of
+      {countryDatas[correctNumber].capital} is the capital of
     </h1>
   ),
 };
@@ -20,7 +20,7 @@ const QUIZ_LIST = {
 const QUIZ_NAME = Object.keys(QUIZ_LIST);
 const QUIZ_LENGTH = QUIZ_NAME.length;
 
-const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
+const Quiz = ({ countryDatas, correctNumber, scoreCount, setScoreCount }) => {
   const [answerIndex, setAnswerIndex] = useState(null);
   const [questionType, setQuestionType] = useState(
     QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]
@@ -34,7 +34,7 @@ const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
   const onClick = () => {
     setAnswerIndex(null);
 
-    if (answerNum === answerIndex) {
+    if (correctNumber === answerIndex) {
       setScoreCount(scoreCount + 1);
     } else {
       setShowResult(true);
@@ -45,11 +45,11 @@ const Quiz = ({ countryDatas, answerNum, scoreCount, setScoreCount }) => {
     <Result scoreCount={scoreCount} />
   ) : (
     <div>
-      {QUIZ_LIST[questionType]({ countryDatas, answerNum })}
+      {QUIZ_LIST[questionType]({ countryDatas, correctNumber })}
       <ol>
         <AnswerList
           countryDatas={countryDatas}
-          answerNum={answerNum}
+          correctNumber={correctNumber}
           setAnswerIndex={setAnswerIndex}
           answerIndex={answerIndex}
         />

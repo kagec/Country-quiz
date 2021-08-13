@@ -1,6 +1,6 @@
 const AnswerList = ({
   countryDatas,
-  answerNum,
+  correctNumber,
   setAnswerIndex,
   answerIndex,
 }) => {
@@ -8,7 +8,7 @@ const AnswerList = ({
     <li key={index}>
       <button
         className={`btn-answer 
-        ${answerIndex !== null && index === answerNum ? "correct" : ""}
+        ${answerIndex !== null && index === correctNumber ? "correct" : ""}
         ${answerIndex === index ? "incorrect" : ""}
 
          `}

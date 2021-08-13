@@ -42,7 +42,7 @@ const CountryQuiz = () => {
   };
 
   const choseCountry = chooseCountry();
-  const answerNum = getRandomInt(4);
+  const correctNumber = getRandomInt(4);
 
   return (
     <div className="quiz-field">
@@ -51,7 +51,7 @@ const CountryQuiz = () => {
       ) : (
         <Quiz
           countryDatas={choseCountry}
-          answerNum={answerNum}
+          correctNumber={correctNumber}
           scoreCount={scoreCount}
           setScoreCount={setScoreCount}
         />
