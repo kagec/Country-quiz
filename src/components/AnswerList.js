@@ -1,19 +1,21 @@
-import { useState } from "react";
-
-const AnswerList = ({ countryDatas, answerNum }) => {
-  const [isPressed, setIsPressed] = useState(false);
-
+const AnswerList = ({
+  countryDatas,
+  correctNumber,
+  setAnswerIndex,
+  answerIndex,
+}) => {
   return countryDatas.map((data, index) => (
     <li key={index}>
       <button
         className={`btn-answer 
-        ${isPressed && index === answerNum ? "correct" : ""}
-        ${data.isPressed && index !== answerNum ? "incorrect" : ""}
+        ${answerIndex !== null && index === correctNumber ? "correct" : ""}
+        ${answerIndex === index ? "incorrect" : ""}
 
          `}
         onClick={() => {
-          data.isPressed = true;
-          setIsPressed(true);
+          if (answerIndex === null) {
+            setAnswerIndex(index);
+          }
         }}
       >
         {data.name}
