@@ -30,9 +30,7 @@ const Quiz = ({ countryDatas }) => {
   const [choseCountry, setChoseCountry] = useState(chooseCountry(countryDatas));
   const [correctNumber, setCorrectNumber] = useState(getRandomInt(4));
 
-  useEffect(() => {
-    setQuestionType(QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]);
-  }, [scoreCount]);
+  useEffect(() => {}, [choseCountry]);
 
   const onClick = () => {
     setAnswerIndex(null);
@@ -41,6 +39,7 @@ const Quiz = ({ countryDatas }) => {
       setScoreCount(scoreCount + 1);
       setChoseCountry(chooseCountry(countryDatas));
       setCorrectNumber(getRandomInt(4));
+      setQuestionType(QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]);
     } else {
       setShowResult(true);
     }
@@ -51,6 +50,7 @@ const Quiz = ({ countryDatas }) => {
     setScoreCount(0);
     setChoseCountry(chooseCountry(countryDatas));
     setCorrectNumber(getRandomInt(4));
+    setQuestionType(QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]);
   };
 
   return showResult ? (
