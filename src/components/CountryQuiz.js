@@ -32,7 +32,7 @@ const CountryQuiz = () => {
       {countryData === null ? (
         <div className="load">Loading...</div>
       ) : (
-        <Quiz correctNumber={correctNumber} />
+        <Quiz countryDatas={countryData} correctNumber={correctNumber} />
       )}
     </div>
   );
