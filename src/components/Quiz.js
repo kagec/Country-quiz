@@ -35,7 +35,7 @@ const QUIZ_LIST = {
 const QUIZ_NAME = Object.keys(QUIZ_LIST);
 const QUIZ_LENGTH = QUIZ_NAME.length;
 
-const Quiz = ({ countryDatas, correctNumber }) => {
+const Quiz = ({ countryDatas }) => {
   const [answerIndex, setAnswerIndex] = useState(null);
   const [questionType, setQuestionType] = useState(
     QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]
@@ -43,7 +43,8 @@ const Quiz = ({ countryDatas, correctNumber }) => {
   const [showResult, setShowResult] = useState(false);
   const [scoreCount, setScoreCount] = useState(0);
   const [choseCountry, setChoseCountry] = useState(chooseCountry(countryDatas));
-  console.log(choseCountry);
+  const [correctNumber, setCorrectNumber] = useState(getRandomInt(4));
+
   useEffect(() => {
     setQuestionType(QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]);
   }, [scoreCount]);

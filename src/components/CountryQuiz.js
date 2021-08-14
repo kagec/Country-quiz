@@ -25,14 +25,12 @@ const CountryQuiz = () => {
     fetchCountryData();
   }, []);
 
-  const correctNumber = getRandomInt(4);
-
   return (
     <div className="quiz-field">
       {countryData === null ? (
         <div className="load">Loading...</div>
       ) : (
-        <Quiz countryDatas={countryData} correctNumber={correctNumber} />
+        <Quiz countryDatas={countryData} />
       )}
     </div>
   );
