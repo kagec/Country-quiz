@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import AnswerList from "./AnswerList";
 import { chooseCountry, getRandomInt } from "./CountryQuiz";
-import IsAnswered from "./IsAnswered";
 import Result from "./Result";
 
 const QUIZ_LIST = {
@@ -67,11 +66,11 @@ const Quiz = ({ countryDatas }) => {
           answerIndex={answerIndex}
         />
       </ol>
-      <IsAnswered answerIndex={answerIndex}>
-        <button className="btn-next" onClick={() => onClick()}>
+      {answerIndex !== null && (
+        <button className="btn-next" onClick={onClick}>
           NEXT
         </button>
-      </IsAnswered>
+      )}
     </div>
   );
 };
