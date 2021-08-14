@@ -30,8 +30,6 @@ const Quiz = ({ countryDatas }) => {
   const [choseCountry, setChoseCountry] = useState(chooseCountry(countryDatas));
   const [correctNumber, setCorrectNumber] = useState(getRandomInt(4));
 
-  useEffect(() => {}, [choseCountry]);
-
   const onClick = () => {
     setAnswerIndex(null);
 
