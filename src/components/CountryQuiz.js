@@ -25,22 +25,6 @@ const CountryQuiz = () => {
     fetchCountryData();
   }, []);
 
-  const chooseCountry = () => {
-    if (!countryData) {
-      return null;
-    }
-
-    let chooseData = new Set();
-    const countryDataLength = countryData.length;
-
-    while (chooseData.size < 4) {
-      chooseData.add(countryData[getRandomInt(countryDataLength)]);
-    }
-
-    return [...chooseData];
-  };
-
-  const choseCountry = chooseCountry();
   const correctNumber = getRandomInt(4);
 
   return (
@@ -48,7 +32,7 @@ const CountryQuiz = () => {
       {countryData === null ? (
         <div className="load">Loading...</div>
       ) : (
-        <Quiz countryDatas={choseCountry} correctNumber={correctNumber} />
+        <Quiz correctNumber={correctNumber} />
       )}
     </div>
   );

@@ -3,6 +3,21 @@ import AnswerList from "./AnswerList";
 import { getRandomInt } from "./CountryQuiz";
 import Result from "./Result";
 
+const chooseCountry = (countryData) => {
+  if (!countryData) {
+    return null;
+  }
+
+  let chooseData = new Set();
+  const countryDataLength = countryData.length;
+
+  while (chooseData.size < 4) {
+    chooseData.add(countryData[getRandomInt(countryDataLength)]);
+  }
+
+  return [...chooseData];
+};
+
 const QUIZ_LIST = {
   FlagBelongTo: ({ countryDatas, correctNumber }) => (
     <div>
