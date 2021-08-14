@@ -8,7 +8,6 @@ export const getRandomInt = (max) => {
 
 const CountryQuiz = () => {
   const [countryData, setCountryData] = useState(null);
-  const [scoreCount, setScoreCount] = useState(0);
 
   useEffect(() => {
     const fetchCountryData = async () => {
@@ -49,12 +48,7 @@ const CountryQuiz = () => {
       {countryData === null ? (
         <div className="load">Loading...</div>
       ) : (
-        <Quiz
-          countryDatas={choseCountry}
-          correctNumber={correctNumber}
-          scoreCount={scoreCount}
-          setScoreCount={setScoreCount}
-        />
+        <Quiz countryDatas={choseCountry} correctNumber={correctNumber} />
       )}
     </div>
   );

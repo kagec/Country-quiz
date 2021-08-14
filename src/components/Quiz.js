@@ -20,12 +20,13 @@ const QUIZ_LIST = {
 const QUIZ_NAME = Object.keys(QUIZ_LIST);
 const QUIZ_LENGTH = QUIZ_NAME.length;
 
-const Quiz = ({ countryDatas, correctNumber, scoreCount, setScoreCount }) => {
+const Quiz = ({ countryDatas, correctNumber }) => {
   const [answerIndex, setAnswerIndex] = useState(null);
   const [questionType, setQuestionType] = useState(
     QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]
   );
   const [showResult, setShowResult] = useState(false);
+  const [scoreCount, setScoreCount] = useState(0);
 
   useEffect(() => {
     setQuestionType(QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]);
