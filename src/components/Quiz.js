@@ -19,15 +19,15 @@ const chooseCountry = (countryData) => {
 };
 
 const QUIZ_LIST = {
-  FlagBelongTo: ({ countryDatas, correctNumber }) => (
+  FlagBelongTo: ({ choseCountry, correctNumber }) => (
     <div>
-      <img src={countryDatas[correctNumber].flag} alt="flag" className="img" />
+      <img src={choseCountry[correctNumber].flag} alt="flag" className="img" />
       <h1 className="question">Which country does this flag belong to?</h1>
     </div>
   ),
-  CityIsCapitalOf: ({ countryDatas, correctNumber }) => (
+  CityIsCapitalOf: ({ choseCountry, correctNumber }) => (
     <h1 className="question">
-      {countryDatas[correctNumber].capital} is the capital of
+      {choseCountry[correctNumber].capital} is the capital of
     </h1>
   ),
 };
@@ -43,7 +43,7 @@ const Quiz = ({ countryDatas, correctNumber }) => {
   const [showResult, setShowResult] = useState(false);
   const [scoreCount, setScoreCount] = useState(0);
   const [choseCountry, setChoseCountry] = useState(chooseCountry(countryDatas));
-
+  console.log(choseCountry);
   useEffect(() => {
     setQuestionType(QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]);
   }, [scoreCount]);
@@ -69,10 +69,10 @@ const Quiz = ({ countryDatas, correctNumber }) => {
     />
   ) : (
     <div>
-      {QUIZ_LIST[questionType]({ countryDatas, correctNumber })}
+      {QUIZ_LIST[questionType]({ choseCountry, correctNumber })}
       <ol>
         <AnswerList
-          countryDatas={countryDatas}
+          countryDatas={choseCountry}
           correctNumber={correctNumber}
           setAnswerIndex={setAnswerIndex}
           answerIndex={answerIndex}
