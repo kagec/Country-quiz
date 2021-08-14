@@ -54,6 +54,9 @@ const Quiz = ({ countryDatas }) => {
       scoreCount={scoreCount}
       setScoreCount={setScoreCount}
       setShowResult={setShowResult}
+      setChoseCountry={setChoseCountry}
+      countryDatas={countryDatas}
+      setCorrectNumber={setCorrectNumber}
     />
   ) : (
     <div>

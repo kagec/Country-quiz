@@ -1,7 +1,18 @@
-const Result = ({ scoreCount, setScoreCount, setShowResult }) => {
+import { chooseCountry, getRandomInt } from "./CountryQuiz";
+
+const Result = ({
+  scoreCount,
+  setScoreCount,
+  setShowResult,
+  setChoseCountry,
+  countryDatas,
+  setCorrectNumber,
+}) => {
   const onClick = () => {
     setShowResult(false);
     setScoreCount(0);
+    setChoseCountry(chooseCountry(countryDatas));
+    setCorrectNumber(getRandomInt(4));
   };
 
   return (
