@@ -6,9 +6,23 @@ export const getRandomInt = (max) => {
   return Math.floor(Math.random() * max);
 };
 
+export const chooseCountry = (countryData) => {
+  if (!countryData) {
+    return null;
+  }
+
+  let chooseData = new Set();
+  const countryDataLength = countryData.length;
+
+  while (chooseData.size < 4) {
+    chooseData.add(countryData[getRandomInt(countryDataLength)]);
+  }
+
+  return [...chooseData];
+};
+
 const CountryQuiz = () => {
   const [countryData, setCountryData] = useState(null);
-  const [scoreCount, setScoreCount] = useState(0);
 
   useEffect(() => {
     const fetchCountryData = async () => {
@@ -26,35 +40,12 @@ const CountryQuiz = () => {
     fetchCountryData();
   }, []);
 
-  const chooseCountry = () => {
-    if (!countryData) {
-      return null;
-    }
-
-    let chooseData = new Set();
-    const countryDataLength = countryData.length;
-
-    while (chooseData.size < 4) {
-      chooseData.add(countryData[getRandomInt(countryDataLength)]);
-    }
-
-    return [...chooseData];
-  };
-
-  const choseCountry = chooseCountry();
-  const correctNumber = getRandomInt(4);
-
   return (
     <div className="quiz-field">
       {countryData === null ? (
         <div className="load">Loading...</div>
       ) : (
-        <Quiz
-          countryDatas={choseCountry}
-          correctNumber={correctNumber}
-          scoreCount={scoreCount}
-          setScoreCount={setScoreCount}
-        />
+        <Quiz countryDatas={countryData} />
       )}
     </div>
   );
