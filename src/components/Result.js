@@ -18,7 +18,7 @@ const Result = ({
   return (
     <div>
       <h2>Results</h2>
-      <p>You got {scoreCount === -1 ? 0 : scoreCount} correct answer</p>
+      <p>You got {scoreCount} correct answer</p>
       <button onClick={() => onClick()}>Try again</button>
     </div>
   );

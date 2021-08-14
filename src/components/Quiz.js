@@ -43,9 +43,6 @@ const Quiz = ({ countryDatas }) => {
       setCorrectNumber(getRandomInt(4));
     } else {
       setShowResult(true);
-      if (scoreCount === 0) {
-        setScoreCount(-1);
-      }
     }
   };
 
