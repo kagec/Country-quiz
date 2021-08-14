@@ -42,6 +42,7 @@ const Quiz = ({ countryDatas, correctNumber }) => {
   );
   const [showResult, setShowResult] = useState(false);
   const [scoreCount, setScoreCount] = useState(0);
+  const [choseCountry, setChoseCountry] = useState(chooseCountry(countryDatas));
 
   useEffect(() => {
     setQuestionType(QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]);
