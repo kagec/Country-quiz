@@ -54,6 +54,8 @@ const Quiz = ({ countryDatas }) => {
 
     if (correctNumber === answerIndex) {
       setScoreCount(scoreCount + 1);
+      setChoseCountry(chooseCountry(countryDatas));
+      setCorrectNumber(getRandomInt(4));
     } else {
       setShowResult(true);
       if (scoreCount === 0) {
