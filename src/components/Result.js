@@ -1,25 +1,9 @@
-import { chooseCountry, getRandomInt } from "./CountryQuiz";
-
-const Result = ({
-  scoreCount,
-  setScoreCount,
-  setShowResult,
-  setChoseCountry,
-  countryDatas,
-  setCorrectNumber,
-}) => {
-  const onClick = () => {
-    setShowResult(false);
-    setScoreCount(0);
-    setChoseCountry(chooseCountry(countryDatas));
-    setCorrectNumber(getRandomInt(4));
-  };
-
+const Result = ({ scoreCount, initialize }) => {
   return (
     <div>
       <h2>Results</h2>
       <p>You got {scoreCount} correct answer</p>
-      <button onClick={() => onClick()}>Try again</button>
+      <button onClick={() => initialize()}>Try again</button>
     </div>
   );
 };

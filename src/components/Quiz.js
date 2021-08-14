@@ -46,15 +46,15 @@ const Quiz = ({ countryDatas }) => {
     }
   };
 
+  const initialize = () => {
+    setShowResult(false);
+    setScoreCount(0);
+    setChoseCountry(chooseCountry(countryDatas));
+    setCorrectNumber(getRandomInt(4));
+  };
+
   return showResult ? (
-    <Result
-      scoreCount={scoreCount}
-      setScoreCount={setScoreCount}
-      setShowResult={setShowResult}
-      setChoseCountry={setChoseCountry}
-      countryDatas={countryDatas}
-      setCorrectNumber={setCorrectNumber}
-    />
+    <Result scoreCount={scoreCount} initialize={initialize} />
   ) : (
     <div>
       {QUIZ_LIST[questionType]({ choseCountry, correctNumber })}
