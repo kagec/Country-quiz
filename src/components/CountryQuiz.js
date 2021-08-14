@@ -6,6 +6,21 @@ export const getRandomInt = (max) => {
   return Math.floor(Math.random() * max);
 };
 
+export const chooseCountry = (countryData) => {
+  if (!countryData) {
+    return null;
+  }
+
+  let chooseData = new Set();
+  const countryDataLength = countryData.length;
+
+  while (chooseData.size < 4) {
+    chooseData.add(countryData[getRandomInt(countryDataLength)]);
+  }
+
+  return [...chooseData];
+};
+
 const CountryQuiz = () => {
   const [countryData, setCountryData] = useState(null);
 
