@@ -11,6 +11,13 @@ header {
   border-radius: 25px;
 }
 
+.advIcon {
+  position: absolute;
+  width: 130px;
+  top: -10px;
+  left: 170px;
+}
+
 .question {
   text-align: center;
   overflow-wrap: break-word;

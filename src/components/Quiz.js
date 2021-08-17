@@ -56,7 +56,7 @@ const Quiz = ({ countryDatas }) => {
     <Result scoreCount={scoreCount} initialize={initialize} />
   ) : (
     <div>
-      <img src={AdventureIcon} alt="Icon" />
+      <img className="advIcon" src={AdventureIcon} alt="Icon" />
 
       {QUIZ_LIST[questionType]({ choseCountry, correctNumber })}
       <ol>
