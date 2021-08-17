@@ -59,7 +59,7 @@ const Quiz = ({ countryDatas }) => {
       <img className="advIcon" src={AdventureIcon} alt="Icon" />
 
       {QUIZ_LIST[questionType]({ choseCountry, correctNumber })}
-      <ol>
+      <ol className="bl_quizApp_ol">
         <AnswerList
           countryDatas={choseCountry}
           correctNumber={correctNumber}

@@ -11,6 +11,12 @@ header {
   border-radius: 25px;
 }
 
+.bl_quizApp_ol {
+  position: absolute;
+  top: 230px;
+  padding: 0 25px;
+}
+
 .advIcon {
   position: absolute;
   width: 130px;
