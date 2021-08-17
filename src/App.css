@@ -31,6 +31,10 @@ header {
 }
 
 .question {
+  position: absolute;
+  font-size: 1.1em;
+  top: 170px;
+  margin: 0 25px;
   text-align: center;
   overflow-wrap: break-word;
 }
