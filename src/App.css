@@ -17,6 +17,12 @@ header {
   padding: 0 25px;
 }
 
+.btn-next {
+  position: absolute;
+  top: 500px;
+  right: 30px;
+}
+
 .advIcon {
   position: absolute;
   width: 130px;
