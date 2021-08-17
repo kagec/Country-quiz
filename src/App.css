@@ -116,3 +116,8 @@ header {
   border-color: purple;
   margin-top: 50px;
 }
+
+li {
+  list-style-type: upper-alpha;
+  color: steelblue;
+}
