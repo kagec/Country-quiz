@@ -17,7 +17,13 @@ header {
 }
 
 .btn-next {
-  margin-left: 200px;
+  margin-left: 155px;
+}
+
+.btn-next:hover {
+  background-color: orange;
+  color: white;
+  border-color: transparent;
 }
 
 .advIcon {
