@@ -51,6 +51,7 @@ header {
   border-radius: 10px;
   border-color: rgb(177, 167, 241);
   color: steelblue;
+  background-color: white;
 }
 
 .btn-answer {
