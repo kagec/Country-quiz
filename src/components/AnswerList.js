@@ -1,3 +1,5 @@
+import { BiCheckCircle, BiXCircle } from "react-icons/bi";
+
 const AnswerList = ({
   countryDatas,
   correctNumber,
@@ -19,6 +21,14 @@ const AnswerList = ({
         }}
       >
         {data.name}
+        {answerIndex !== null &&
+        answerIndex === index &&
+        !(index === correctNumber) ? (
+          <BiXCircle />
+        ) : null}
+        {answerIndex !== null && index === correctNumber ? (
+          <BiCheckCircle />
+        ) : null}
       </button>
     </li>
   ));
