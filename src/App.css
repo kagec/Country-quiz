@@ -39,11 +39,15 @@ header {
   padding-top: 70px;
 }
 
+.btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+}
+
 .btn-answer {
   margin: 10px 25px 10px 0;
   width: 250px;
-  height: 40px;
-  border-radius: 10px;
 }
 
 .btn-answer:hover {

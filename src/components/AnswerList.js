@@ -7,7 +7,7 @@ const AnswerList = ({
   return countryDatas.map((data, index) => (
     <li key={index}>
       <button
-        className={`btn-answer 
+        className={`btn btn-answer 
         ${answerIndex !== null && index === correctNumber ? "correct" : ""}
         ${answerIndex === index ? "incorrect" : ""}
 

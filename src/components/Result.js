@@ -6,7 +6,9 @@ const Result = ({ scoreCount, initialize }) => {
       <img src={ResultIcon} alt="Result Icon" />
       <h2>Results</h2>
       <p>You got {scoreCount} correct answer</p>
-      <button onClick={() => initialize()}>Try again</button>
+      <button className="btn btn-tryAgain" onClick={() => initialize()}>
+        Try again
+      </button>
     </div>
   );
 };
