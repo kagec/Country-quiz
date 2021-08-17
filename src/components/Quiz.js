@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import AnswerList from "./AnswerList";
 import { chooseCountry, getRandomInt } from "./CountryQuiz";
 import Result from "./Result";
