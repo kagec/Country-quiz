@@ -121,3 +121,8 @@ li {
   list-style-type: upper-alpha;
   color: steelblue;
 }
+
+.mark {
+  position: absolute;
+  right: 40px;
+}

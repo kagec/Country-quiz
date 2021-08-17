@@ -24,10 +24,10 @@ const AnswerList = ({
         {answerIndex !== null &&
         answerIndex === index &&
         !(index === correctNumber) ? (
-          <BiXCircle />
+          <BiXCircle size={15} className="mark" />
         ) : null}
         {answerIndex !== null && index === correctNumber ? (
-          <BiCheckCircle />
+          <BiCheckCircle size={15} className="mark" />
         ) : null}
       </button>
     </li>
