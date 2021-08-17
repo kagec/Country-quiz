@@ -48,18 +48,25 @@ header {
 .btn-answer {
   margin: 10px 25px 10px 0;
   width: 250px;
+  color: steelblue;
+  border-width: 2px;
+  border-color: rgb(177, 167, 241);
 }
 
 .btn-answer:hover {
-  background-color: rgba(217, 255, 0, 0.801);
+  background-color: orange;
+  color: white;
+  border-color: transparent;
 }
 
 .incorrect {
-  background-color: red !important;
+  background-color: rgb(236, 72, 72) !important;
+  color: white;
 }
 
 .correct {
   background-color: rgb(53, 161, 53) !important ;
+  color: white;
 }
 
 .img {
