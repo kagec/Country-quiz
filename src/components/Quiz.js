@@ -2,6 +2,7 @@ import { useState } from "react";
 import AnswerList from "./AnswerList";
 import { chooseCountry, getRandomInt } from "./CountryQuiz";
 import Result from "./Result";
+import AdventureIcon from "../image/undraw_adventure_4hum 1.svg";
 
 const QUIZ_LIST = {
   FlagBelongTo: ({ choseCountry, correctNumber }) => (
@@ -55,6 +56,8 @@ const Quiz = ({ countryDatas }) => {
     <Result scoreCount={scoreCount} initialize={initialize} />
   ) : (
     <div>
+      <img src={AdventureIcon} alt="Icon" />
+
       {QUIZ_LIST[questionType]({ choseCountry, correctNumber })}
       <ol>
         <AnswerList
