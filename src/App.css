@@ -91,3 +91,28 @@ header {
 .icon {
   right: 20px;
 }
+
+.ly_result {
+  text-align: center;
+  padding-top: 25px;
+}
+
+.ly_result > h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.ly_result > p {
+  margin-top: -20px;
+}
+.ly_result > p > span {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(95, 173, 95);
+}
+
+.btn-tryAgain {
+  color: purple;
+  border-color: purple;
+  margin-top: 50px;
+}
