@@ -49,14 +49,14 @@ header {
   width: 120px;
   height: 40px;
   border-radius: 10px;
+  border-color: rgb(177, 167, 241);
+  color: steelblue;
 }
 
 .btn-answer {
   margin: 10px 25px 10px 0;
   width: 250px;
-  color: steelblue;
   border-width: 2px;
-  border-color: rgb(177, 167, 241);
 }
 
 .btn-answer:hover {
