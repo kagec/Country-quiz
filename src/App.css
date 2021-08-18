@@ -68,11 +68,12 @@ header {
 }
 
 .btn {
+  display: flex;
   width: 120px;
   height: 40px;
   border-radius: 10px;
   border-color: rgb(177, 167, 241);
-  color: steelblue;
+  color: rgba(96, 102, 208, 0.8);
   background-color: white;
 }
 
@@ -83,7 +84,7 @@ header {
 }
 
 .btn-answer:hover {
-  background-color: orange;
+  background: #f9a826;
   color: white;
   border-color: transparent;
 }
@@ -117,12 +118,12 @@ header {
 }
 
 .incorrect {
-  background-color: rgb(236, 72, 72) !important;
+  background: #ea8282 !important;
   color: white;
 }
 
 .correct {
-  background-color: rgb(53, 161, 53) !important ;
+  background-color: #60bf88 !important ;
   color: white;
 }
 
@@ -178,10 +179,37 @@ li {
 
 .mark {
   position: absolute;
+  display: inline-block;
   right: 40px;
+  margin-top: 15px;
 }
 
 .alphabetIndex {
+  display: inline-block;
   position: absolute;
-  left: 40px;
+  margin: 10px 0 10px 10px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  transform: translateY(-10%);
+}
+
+.dataName {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 50px;
+  margin-left: 50px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow-wrap: break-word;
+  text-align: left;
 }

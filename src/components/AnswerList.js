@@ -23,7 +23,7 @@ const AnswerList = ({
         }}
       >
         <span className="alphabetIndex">{ALPHABET_INDEX[index]}</span>
-        {data.name}
+        <span className="dataName">{data.name}</span>
         {answerIndex !== null &&
         answerIndex === index &&
         !(index === correctNumber) ? (
