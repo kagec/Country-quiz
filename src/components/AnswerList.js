@@ -1,5 +1,7 @@
 import { BiCheckCircle, BiXCircle } from "react-icons/bi";
 
+const ALPHABET_INDEX = "ABCD";
+
 const AnswerList = ({
   countryDatas,
   correctNumber,
@@ -20,6 +22,7 @@ const AnswerList = ({
           }
         }}
       >
+        <span className="alphabetIndex">{ALPHABET_INDEX[index]}</span>
         {data.name}
         {answerIndex !== null &&
         answerIndex === index &&

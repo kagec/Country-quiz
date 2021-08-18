@@ -118,11 +118,16 @@ header {
 }
 
 li {
-  list-style-type: upper-alpha;
+  list-style: none;
   color: steelblue;
 }
 
 .mark {
   position: absolute;
   right: 40px;
+}
+
+.alphabetIndex {
+  position: absolute;
+  left: 40px;
 }
