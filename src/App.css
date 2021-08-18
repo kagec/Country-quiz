@@ -152,14 +152,45 @@ header {
   padding-top: 25px;
 }
 
+.ly_result > img {
+  position: absolute;
+  width: 238px;
+  height: 136px;
+  top: 42px;
+  left: 113px;
+}
+
 .ly_result > h2 {
-  font-size: 30px;
+  position: absolute;
+  width: 181px;
+  height: 72px;
+  top: 220px;
+  left: 140px;
+  font-family: Poppins;
+  font-style: normal;
   font-weight: bold;
+  font-size: 48px;
+  line-height: 72px;
+
+  color: #1d355d;
 }
 
 .ly_result > p {
-  margin-top: -20px;
+  position: absolute;
+  width: 247px;
+  height: 54px;
+  top: 340px;
+  left: 108px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: #1d355d;
 }
+
 .ly_result > p > span {
   font-size: 30px;
   font-weight: bold;
@@ -167,11 +198,32 @@ header {
 }
 
 .btn-tryAgain {
-  color: purple;
-  border-color: purple;
-  margin-top: 50px;
+  position: absolute;
+  width: 209px;
+  height: 62px;
+  top: 480px;
+  left: 127px;
+
+  border: 2px solid #1d355d;
+  box-sizing: border-box;
+  border-radius: 12px;
 }
 
+.btn-tryAgain > span {
+  position: absolute;
+  width: 87px;
+  height: 27px;
+  top: 18px;
+  left: 65px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: #1d355d;
+}
 li {
   list-style: none;
   color: steelblue;
