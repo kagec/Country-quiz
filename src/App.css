@@ -43,9 +43,10 @@ header {
 
 .advIcon {
   position: absolute;
-  width: 130px;
-  top: -10px;
-  left: 170px;
+  width: 162px;
+  height: 116px;
+  left: 302px;
+  bottom: 473px;
 }
 
 .question {
