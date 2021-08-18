@@ -27,7 +27,8 @@ header {
 }
 
 .bl_quizApp_ol {
-  top: 170px;
+  position: absolute;
+  top: 136px;
   padding: 0 25px;
 }
 
@@ -86,9 +87,9 @@ header {
 }
 
 .btn-answer {
-  margin: 10px 25px 10px 0;
-  width: 250px;
-  border-width: 2px;
+  margin-top: 32px;
+  width: 400px;
+  height: 56px;
 }
 
 .btn-answer:hover {
