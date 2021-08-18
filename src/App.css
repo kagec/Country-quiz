@@ -177,13 +177,6 @@ li {
   color: steelblue;
 }
 
-.mark {
-  position: absolute;
-  display: inline-block;
-  right: 40px;
-  margin-top: 15px;
-}
-
 .alphabetIndex {
   display: inline-block;
   position: absolute;
@@ -212,4 +205,11 @@ li {
   padding-right: 10px;
   overflow-wrap: break-word;
   text-align: left;
+}
+
+.material-icons {
+  position: absolute;
+  display: inline-block;
+  right: 40px;
+  margin-top: 12px;
 }

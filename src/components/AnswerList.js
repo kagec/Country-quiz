@@ -1,5 +1,3 @@
-import { BiCheckCircle, BiXCircle } from "react-icons/bi";
-
 const ALPHABET_INDEX = "ABCD";
 
 const AnswerList = ({
@@ -27,10 +25,10 @@ const AnswerList = ({
         {answerIndex !== null &&
         answerIndex === index &&
         !(index === correctNumber) ? (
-          <BiXCircle size={15} className="mark" />
+          <span class="material-icons">highlight_off</span>
         ) : null}
         {answerIndex !== null && index === correctNumber ? (
-          <BiCheckCircle size={15} className="mark" />
+          <span class="material-icons">check_circle_outline</span>
         ) : null}
       </button>
     </li>
