@@ -4,11 +4,13 @@ header {
 }
 
 .bl_quizApp {
-  color: purple;
-  background-color: #fff;
-  width: 300px;
-  height: 450px;
-  border-radius: 25px;
+  position: absolute;
+  width: 464px;
+  height: 515px;
+  left: 488px;
+  top: 252px;
+  background: #ffffff;
+  border-radius: 24px;
 }
 
 .bl_quizApp_ol {
