@@ -25,10 +25,10 @@ const AnswerList = ({
         {answerIndex !== null &&
         answerIndex === index &&
         !(index === correctNumber) ? (
-          <span class="material-icons">highlight_off</span>
+          <span className="material-icons">highlight_off</span>
         ) : null}
         {answerIndex !== null && index === correctNumber ? (
-          <span class="material-icons">check_circle_outline</span>
+          <span className="material-icons">check_circle_outline</span>
         ) : null}
       </button>
     </li>
