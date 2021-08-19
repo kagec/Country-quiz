@@ -8,13 +8,13 @@ const QUIZ_LIST = {
   FlagBelongTo: ({ choseCountry, correctNumber }) => (
     <div>
       <img src={choseCountry[correctNumber].flag} alt="flag" className="img" />
-      <h1 className="question question_flagBelongTo">
+      <h1 className="question questionFlagBelongTo">
         Which country does this flag belong to?
       </h1>
     </div>
   ),
   CityIsCapitalOf: ({ choseCountry, correctNumber }) => (
-    <h1 className="question question_capitalOf">
+    <h1 className="question questionCapitalOf">
       {choseCountry[correctNumber].capital} is the capital of
     </h1>
   ),
@@ -61,7 +61,7 @@ const Quiz = ({ countryDatas }) => {
       <img className="advIcon" src={AdventureIcon} alt="Icon" />
 
       {QUIZ_LIST[questionType]({ choseCountry, correctNumber })}
-      <ol className="bl_quizApp_ol">
+      <ol className="answerList">
         <AnswerList
           countryDatas={choseCountry}
           correctNumber={correctNumber}
@@ -70,7 +70,7 @@ const Quiz = ({ countryDatas }) => {
         />
       </ol>
       {answerIndex !== null && (
-        <button className="btn btn-next" onClick={onClick}>
+        <button className="btn btnNext" onClick={onClick}>
           <span>Next</span>
         </button>
       )}

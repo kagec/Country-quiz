@@ -16,14 +16,14 @@ header {
   color: #f2f2f2;
 }
 
-.bl_quizApp {
+.quizApp {
   width: 464px;
   padding-bottom: 32px;
   background: #ffffff;
   border-radius: 24px;
 }
 
-.bl_quizApp_ol {
+.answerList {
   display: inline;
 }
 
@@ -51,11 +51,11 @@ header {
   color: #2f527b;
 }
 
-.question.question_capitalOf {
+.question.questionCapitalOf {
   margin-top: 68px;
 }
 
-.question.question_flagBelongTo {
+.question.questionFlagBelongTo {
   margin-top: 28px;
   color: #1d355d;
 }
@@ -74,20 +74,20 @@ header {
   cursor: pointer;
 }
 
-.btn-answer {
+.btnAnswer {
   margin-top: 32px;
   margin-right: auto;
   margin-left: auto;
   width: 400px;
 }
 
-.btn-answer:hover {
+.btnAnswer:hover {
   background: #f9a826;
   color: white;
   border-color: transparent;
 }
 
-.btn-next {
+.btnNext {
   width: 116px;
   height: 56px;
   margin-top: 32px;
@@ -100,7 +100,7 @@ header {
   border-color: transparent;
 }
 
-.btn-next > span {
+.btnNext > span {
   width: 43px;
   height: 27px;
   margin: auto;

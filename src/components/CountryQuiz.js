@@ -41,7 +41,7 @@ const CountryQuiz = () => {
   }, []);
 
   return (
-    <div className="bl_quizApp">
+    <div className="quizApp">
       {countryData === null ? (
         <div className="load">Loading...</div>
       ) : (
