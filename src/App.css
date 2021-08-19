@@ -31,8 +31,8 @@ header {
   position: absolute;
   width: 162px;
   height: 116px;
+  top: -10px;
   left: 302px;
-  bottom: 587px;
 }
 
 .question {
