@@ -63,11 +63,11 @@ header {
 .btn {
   display: flex;
   width: 120px;
-  height: 40px;
-  border-radius: 10px;
-  border-color: rgb(177, 167, 241);
+  background: #ffffff;
+  border: 2px solid rgba(96, 102, 208, 0.7);
+  box-sizing: border-box;
+  border-radius: 12px;
   color: rgba(96, 102, 208, 0.8);
-  background-color: white;
 }
 
 .btn-answer {
@@ -75,7 +75,6 @@ header {
   margin-right: auto;
   margin-left: auto;
   width: 400px;
-  height: 56px;
 }
 
 .btn-answer:hover {
@@ -225,37 +224,37 @@ li {
 
 .alphabetIndex {
   display: inline-block;
-  position: absolute;
-  margin: 10px 0 10px 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
 
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 36px;
-  transform: translateY(-10%);
 }
 
 .dataName {
-  margin-top: auto;
-  margin-bottom: auto;
+  display: inline-block;
+  width: 300px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   margin-right: 50px;
-  margin-left: 50px;
+  margin-left: 40px;
 
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  padding-left: 10px;
-  padding-right: 10px;
   overflow-wrap: break-word;
   text-align: left;
 }
 
 .material-icons {
-  position: absolute;
   display: inline-block;
   right: 40px;
-  margin-top: 12px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
