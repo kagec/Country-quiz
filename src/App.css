@@ -24,9 +24,7 @@ header {
 }
 
 .bl_quizApp_ol {
-  position: absolute;
-  top: 160px;
-  padding: 0 25px;
+  display: inline;
 }
 
 .advIcon {
@@ -38,10 +36,11 @@ header {
 }
 
 .question {
-  position: absolute;
+  display: inline-block;
   width: 373px;
   height: 36px;
-  left: 32px;
+  margin-right: 32px;
+  margin-left: 32px;
 
   font-family: Poppins;
   font-style: normal;
@@ -53,14 +52,11 @@ header {
 }
 
 .question.question_capitalOf {
-  position: absolute;
-  top: 68px;
+  margin-top: 68px;
 }
 
 .question.question_flagBelongTo {
-  position: absolute;
-  height: 72px;
-  top: 100px;
+  margin-top: 28px;
   color: #1d355d;
 }
 
@@ -76,6 +72,8 @@ header {
 
 .btn-answer {
   margin-top: 32px;
+  margin-right: auto;
+  margin-left: auto;
   width: 400px;
   height: 56px;
 }
@@ -125,11 +123,10 @@ header {
 }
 
 .img {
-  position: absolute;
   width: 84px;
   height: 54px;
-  left: 32px;
-  top: 40px;
+  margin-top: 68px;
+  margin-left: 32px;
 
   filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.1));
   border-radius: 4px;
