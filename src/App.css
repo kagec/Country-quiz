@@ -145,19 +145,18 @@ header {
 }
 
 .ly_result > img {
-  position: absolute;
+  display: inline-block;
   width: 238px;
   height: 136px;
-  top: 42px;
+  margin-top: 15px;
   left: 113px;
 }
 
 .ly_result > h2 {
-  position: absolute;
   width: 181px;
   height: 72px;
-  top: 220px;
-  left: 140px;
+  margin: 72px auto 0 auto;
+
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
@@ -168,11 +167,9 @@ header {
 }
 
 .ly_result > p {
-  position: absolute;
   width: 247px;
   height: 54px;
-  top: 340px;
-  left: 108px;
+  margin: 10px auto 0 auto;
 
   font-family: Poppins;
   font-style: normal;
@@ -190,11 +187,9 @@ header {
 }
 
 .btn-tryAgain {
-  position: absolute;
   width: 209px;
   height: 62px;
-  top: 480px;
-  left: 127px;
+  margin: 65px auto 0 auto;
 
   border: 2px solid #1d355d;
   box-sizing: border-box;
@@ -202,11 +197,9 @@ header {
 }
 
 .btn-tryAgain > span {
-  position: absolute;
   width: 87px;
   height: 27px;
-  top: 18px;
-  left: 65px;
+  margin: auto;
 
   font-family: Poppins;
   font-style: normal;
