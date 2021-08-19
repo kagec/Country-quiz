@@ -1,5 +1,4 @@
 header {
-  position: absolute;
   width: 271px;
   height: 54px;
   left: 488px;
@@ -17,7 +16,6 @@ header {
 }
 
 .bl_quizApp {
-  position: absolute;
   width: 464px;
   height: 629px;
   left: 488px;
