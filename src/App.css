@@ -1,45 +1,137 @@
 header {
-  color: white;
-  font-size: x-large;
+  width: 271px;
+  height: 54px;
+  left: 488px;
+  top: 188px;
+  margin-bottom: 10px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 54px;
+
+  text-transform: uppercase;
+
+  color: #f2f2f2;
 }
 
-.quiz-field {
-  background-color: #fff;
-  width: 300px;
-  height: 500px;
-  border-radius: 25px;
+.quizApp {
+  width: 464px;
+  padding-bottom: 32px;
+  background: #ffffff;
+  border-radius: 24px;
+}
+
+.answerList {
+  display: inline;
+}
+
+.advIcon {
+  position: absolute;
+  width: 162px;
+  height: 116px;
+  top: -10px;
+  left: 302px;
 }
 
 .question {
-  color: purple;
-  text-align: center;
-  overflow-wrap: break-word;
+  display: inline-block;
+  width: 373px;
+  height: 36px;
+  margin-right: 32px;
+  margin-left: 32px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+
+  color: #2f527b;
 }
 
-.btn-answer {
-  margin: 10px 25px 10px 0;
-  width: 250px;
-  height: 40px;
-  border-radius: 10px;
+.question.questionCapitalOf {
+  margin-top: 68px;
 }
 
-.btn-answer:hover {
-  background-color: rgba(217, 255, 0, 0.801);
+.question.questionFlagBelongTo {
+  margin-top: 28px;
+  color: #1d355d;
+}
+
+.btn {
+  display: flex;
+  width: 120px;
+  background: #ffffff;
+  border: 2px solid rgba(96, 102, 208, 0.7);
+  box-sizing: border-box;
+  border-radius: 12px;
+  color: rgba(96, 102, 208, 0.8);
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btnAnswer {
+  margin-top: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 400px;
+}
+
+.btnAnswer:hover {
+  background: #f9a826;
+  color: white;
+  border-color: transparent;
+}
+
+.btnNext {
+  width: 116px;
+  height: 56px;
+  margin-top: 32px;
+  margin-right: 32px;
+  margin-left: auto;
+
+  background: #f9a826;
+  box-shadow: 0px 2px 4px rgba(252, 168, 47, 0.4);
+  border-radius: 12px;
+  border-color: transparent;
+}
+
+.btnNext > span {
+  width: 43px;
+  height: 27px;
+  margin: auto;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: #ffffff;
 }
 
 .incorrect {
-  background-color: red !important;
+  background: #ea8282 !important;
+  color: white;
 }
 
 .correct {
-  background-color: rgb(53, 161, 53) !important ;
+  background-color: #60bf88 !important ;
+  color: white;
 }
 
 .img {
-  margin-top: 25px;
-  margin-left: 25px;
-  width: 60px;
-  height: 40px;
+  width: 84px;
+  height: 54px;
+  margin-top: 68px;
+  margin-left: 32px;
+
+  filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.1));
+  border-radius: 4px;
 }
 
 .load {
@@ -49,4 +141,116 @@ header {
 
 .icon {
   right: 20px;
+}
+
+.ly_result {
+  text-align: center;
+  padding-top: 25px;
+}
+
+.ly_result > img {
+  display: inline-block;
+  width: 238px;
+  height: 136px;
+  margin-top: 15px;
+  left: 113px;
+}
+
+.ly_result > h2 {
+  width: 181px;
+  height: 72px;
+  margin: 72px auto 0 auto;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 72px;
+
+  color: #1d355d;
+}
+
+.ly_result > p {
+  width: 247px;
+  height: 54px;
+  margin: 10px auto 0 auto;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: #1d355d;
+}
+
+.ly_result > p > span {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(95, 173, 95);
+}
+
+.btn-tryAgain {
+  width: 209px;
+  height: 62px;
+  margin: 65px auto 0 auto;
+
+  border: 2px solid #1d355d;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.btn-tryAgain > span {
+  width: 87px;
+  height: 27px;
+  margin: auto;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: #1d355d;
+}
+li {
+  list-style: none;
+  color: steelblue;
+}
+
+.alphabetIndex {
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.dataName {
+  display: inline-block;
+  width: 300px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 50px;
+  margin-left: 40px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+.material-icons {
+  display: inline-block;
+  right: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
 }

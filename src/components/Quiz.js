@@ -2,16 +2,19 @@ import { useState } from "react";
 import AnswerList from "./AnswerList";
 import { chooseCountry, getRandomInt } from "./CountryQuiz";
 import Result from "./Result";
+import AdventureIcon from "../image/undraw_adventure_4hum 1.svg";
 
 const QUIZ_LIST = {
   FlagBelongTo: ({ choseCountry, correctNumber }) => (
     <div>
       <img src={choseCountry[correctNumber].flag} alt="flag" className="img" />
-      <h1 className="question">Which country does this flag belong to?</h1>
+      <h1 className="question questionFlagBelongTo">
+        Which country does this flag belong to?
+      </h1>
     </div>
   ),
   CityIsCapitalOf: ({ choseCountry, correctNumber }) => (
-    <h1 className="question">
+    <h1 className="question questionCapitalOf">
       {choseCountry[correctNumber].capital} is the capital of
     </h1>
   ),
@@ -55,8 +58,10 @@ const Quiz = ({ countryDatas }) => {
     <Result scoreCount={scoreCount} initialize={initialize} />
   ) : (
     <div>
+      <img className="advIcon" src={AdventureIcon} alt="Icon" />
+
       {QUIZ_LIST[questionType]({ choseCountry, correctNumber })}
-      <ol>
+      <ol className="answerList">
         <AnswerList
           countryDatas={choseCountry}
           correctNumber={correctNumber}
@@ -65,8 +70,8 @@ const Quiz = ({ countryDatas }) => {
         />
       </ol>
       {answerIndex !== null && (
-        <button className="btn-next" onClick={onClick}>
-          NEXT
+        <button className="btn btnNext" onClick={onClick}>
+          <span>Next</span>
         </button>
       )}
     </div>

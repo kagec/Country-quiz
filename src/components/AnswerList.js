@@ -1,3 +1,5 @@
+const ALPHABET_INDEX = "ABCD";
+
 const AnswerList = ({
   countryDatas,
   correctNumber,
@@ -7,7 +9,7 @@ const AnswerList = ({
   return countryDatas.map((data, index) => (
     <li key={index}>
       <button
-        className={`btn-answer 
+        className={`btn btnAnswer 
         ${answerIndex !== null && index === correctNumber ? "correct" : ""}
         ${answerIndex === index ? "incorrect" : ""}
 
@@ -18,7 +20,16 @@ const AnswerList = ({
           }
         }}
       >
-        {data.name}
+        <span className="alphabetIndex">{ALPHABET_INDEX[index]}</span>
+        <span className="dataName">{data.name}</span>
+        {answerIndex !== null &&
+        answerIndex === index &&
+        !(index === correctNumber) ? (
+          <span className="material-icons">highlight_off</span>
+        ) : null}
+        {answerIndex !== null && index === correctNumber ? (
+          <span className="material-icons">check_circle_outline</span>
+        ) : null}
       </button>
     </li>
   ));
