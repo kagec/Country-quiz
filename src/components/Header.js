@@ -1,5 +1,5 @@
 const Header = () => {
-  return <header>COUNTRYQUIZ</header>;
+  return <header>COUNTRY QUIZ</header>;
 };
 
 export default Header;
