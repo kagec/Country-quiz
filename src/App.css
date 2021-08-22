@@ -217,20 +217,11 @@ header {
 }
 
 .dataName {
-  display: inline-block;
-  width: 300px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-right: 50px;
   margin-left: 40px;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
   font-size: 18px;
-  line-height: 27px;
-  overflow-wrap: break-word;
   text-align: left;
+  width: 100%;
+  word-break: break-word;
 }
 
 .material-icons {
