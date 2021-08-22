@@ -20,6 +20,10 @@ header {
   line-height: 1.5;
 }
 
+.answerList > li:not(:first-child) {
+  margin-top: 32px;
+}
+
 .advIcon {
   position: absolute;
   width: 162px;
