@@ -62,9 +62,11 @@ header {
   width: 120px;
   background: #ffffff;
   border: 2px solid rgba(96, 102, 208, 0.7);
-  box-sizing: border-box;
   border-radius: 12px;
   color: rgba(96, 102, 208, 0.8);
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .btn:hover {
