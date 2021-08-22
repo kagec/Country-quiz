@@ -211,10 +211,6 @@ header {
 
   color: #1d355d;
 }
-li {
-  list-style: none;
-  color: steelblue;
-}
 
 .alphabetIndex {
   display: inline-block;
