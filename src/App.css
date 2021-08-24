@@ -199,3 +199,7 @@ header {
 .quizContainer > div {
   padding-top: 32px;
 }
+
+.footer {
+  text-align: right;
+}
