@@ -33,18 +33,7 @@ header {
 }
 
 .question {
-  display: inline-block;
-  width: 373px;
-  height: 36px;
-  margin-right: 32px;
-  margin-left: 32px;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 36px;
-
+  line-height: 1.5;
   color: #2f527b;
 }
 
