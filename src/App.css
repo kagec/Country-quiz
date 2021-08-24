@@ -100,20 +100,6 @@ header {
   border-color: transparent;
 }
 
-.btnNext > span {
-  width: 43px;
-  height: 27px;
-  margin: auto;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 27px;
-
-  color: #ffffff;
-}
-
 .incorrect {
   background: #ea8282 !important;
   color: white;
