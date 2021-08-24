@@ -156,12 +156,10 @@ header {
 
 .btn-tryAgain {
   width: 209px;
-  height: 62px;
-  margin: 65px auto 0 auto;
-
   border: 2px solid #1d355d;
-  box-sizing: border-box;
-  border-radius: 12px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #1d355d;
 }
 
 .btn-tryAgain > span {
