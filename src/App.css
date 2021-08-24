@@ -148,6 +148,12 @@ header {
   margin: 0;
 }
 
+.ly_result > .score > p > span {
+  font-size: 36px;
+  font-weight: 700;
+  color: rgb(135, 205, 155);
+}
+
 .btn-tryAgain {
   width: 209px;
   height: 62px;
