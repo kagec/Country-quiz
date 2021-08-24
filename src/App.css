@@ -132,6 +132,11 @@ header {
   padding-top: 72px;
 }
 
+.ly_result > div > img {
+  vertical-align: middle;
+  width: 238px;
+}
+
 .btn-tryAgain {
   width: 209px;
   height: 62px;
