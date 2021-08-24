@@ -124,48 +124,6 @@ header {
   line-height: 1.5;
 }
 
-.ly_result > img {
-  display: inline-block;
-  width: 238px;
-  height: 136px;
-  margin-top: 15px;
-  left: 113px;
-}
-
-.ly_result > h2 {
-  width: 181px;
-  height: 72px;
-  margin: 72px auto 0 auto;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 72px;
-
-  color: #1d355d;
-}
-
-.ly_result > p {
-  width: 247px;
-  height: 54px;
-  margin: 10px auto 0 auto;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 27px;
-
-  color: #1d355d;
-}
-
-.ly_result > p > span {
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(95, 173, 95);
-}
-
 .btn-tryAgain {
   width: 209px;
   height: 62px;
