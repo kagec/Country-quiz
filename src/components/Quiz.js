@@ -64,8 +64,8 @@ const Quiz = ({ countryDatas }) => {
         <div className="quizContainer">
           <img className="advIcon" src={AdventureIcon} alt="Icon" />
 
+          <div>{QUIZ_LIST[questionType]({ choseCountry, correctNumber })}</div>
           <div>
-            {QUIZ_LIST[questionType]({ choseCountry, correctNumber })}
             <ol className="answerList">
               <AnswerList
                 countryDatas={choseCountry}
@@ -74,6 +74,8 @@ const Quiz = ({ countryDatas }) => {
                 answerIndex={answerIndex}
               />
             </ol>
+          </div>
+          <div>
             {answerIndex !== null && (
               <button className="btn btnNext" onClick={onClick}>
                 Next
