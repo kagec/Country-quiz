@@ -124,6 +124,10 @@ header {
   line-height: 1.5;
 }
 
+.ly_result > div {
+  padding-top: 18px;
+}
+
 .btn-tryAgain {
   width: 209px;
   height: 62px;
