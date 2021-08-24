@@ -54,25 +54,29 @@ const Quiz = ({ countryDatas }) => {
     setQuestionType(QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]);
   };
 
-  return showResult ? (
-    <Result scoreCount={scoreCount} initialize={initialize} />
-  ) : (
-    <div>
-      <img className="advIcon" src={AdventureIcon} alt="Icon" />
+  return (
+    <div className="quizWrapper">
+      {showResult ? (
+        <Result scoreCount={scoreCount} initialize={initialize} />
+      ) : (
+        <div>
+          <img className="advIcon" src={AdventureIcon} alt="Icon" />
 
-      {QUIZ_LIST[questionType]({ choseCountry, correctNumber })}
-      <ol className="answerList">
-        <AnswerList
-          countryDatas={choseCountry}
-          correctNumber={correctNumber}
-          setAnswerIndex={setAnswerIndex}
-          answerIndex={answerIndex}
-        />
-      </ol>
-      {answerIndex !== null && (
-        <button className="btn btnNext" onClick={onClick}>
-          <span>Next</span>
-        </button>
+          {QUIZ_LIST[questionType]({ choseCountry, correctNumber })}
+          <ol className="answerList">
+            <AnswerList
+              countryDatas={choseCountry}
+              correctNumber={correctNumber}
+              setAnswerIndex={setAnswerIndex}
+              answerIndex={answerIndex}
+            />
+          </ol>
+          {answerIndex !== null && (
+            <button className="btn btnNext" onClick={onClick}>
+              <span>Next</span>
+            </button>
+          )}
+        </div>
       )}
     </div>
   );
