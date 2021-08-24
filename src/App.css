@@ -47,15 +47,6 @@ header {
   margin-top: 20px;
 }
 
-.question.questionCapitalOf {
-  margin-top: 68px;
-}
-
-.question.questionFlagBelongTo {
-  margin-top: 28px;
-  color: #1d355d;
-}
-
 .btn {
   display: flex;
   width: 120px;

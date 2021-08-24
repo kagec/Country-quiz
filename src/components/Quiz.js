@@ -8,16 +8,12 @@ const QUIZ_LIST = {
   FlagBelongTo: ({ choseCountry, correctNumber }) => (
     <div className="question">
       <img src={choseCountry[correctNumber].flag} alt="flag" className="img" />
-      <h1 className="questionFlagBelongTo">
-        Which country does this flag belong to?
-      </h1>
+      <h1>Which country does this flag belong to?</h1>
     </div>
   ),
   CityIsCapitalOf: ({ choseCountry, correctNumber }) => (
     <div className="question">
-      <h1 className="questionCapitalOf">
-        {choseCountry[correctNumber].capital} is the capital of
-      </h1>
+      <h1>{choseCountry[correctNumber].capital} is the capital of</h1>
     </div>
   ),
 };
