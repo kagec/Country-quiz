@@ -76,7 +76,7 @@ const Quiz = ({ countryDatas }) => {
             </ol>
             {answerIndex !== null && (
               <button className="btn btnNext" onClick={onClick}>
-                <span>Next</span>
+                Next
               </button>
             )}
           </div>
