@@ -71,7 +71,7 @@ header {
   font-weight: 500;
 }
 
-.btnAnswer:hover {
+.btn:hover {
   background: #f9a826;
   color: white;
   border-color: transparent;
