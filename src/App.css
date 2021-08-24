@@ -33,28 +33,18 @@ header {
 }
 
 .question {
-  display: inline-block;
-  width: 373px;
-  height: 36px;
-  margin-right: 32px;
-  margin-left: 32px;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 36px;
-
+  line-height: 1.5;
   color: #2f527b;
 }
 
-.question.questionCapitalOf {
-  margin-top: 68px;
+.question > h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
 }
 
-.question.questionFlagBelongTo {
-  margin-top: 28px;
-  color: #1d355d;
+.question > h1:not(:first-child) {
+  margin-top: 20px;
 }
 
 .btn {
@@ -67,6 +57,8 @@ header {
   align-items: center;
   margin: 0;
   padding: 0;
+  justify-content: center;
+  line-height: 1.5;
 }
 
 .btn:hover {
@@ -87,29 +79,16 @@ header {
 
 .btnNext {
   width: 116px;
-  height: 56px;
-  margin-top: 32px;
-  margin-right: 32px;
   margin-left: auto;
+  padding: 14px 0;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
 
   background: #f9a826;
   box-shadow: 0px 2px 4px rgba(252, 168, 47, 0.4);
   border-radius: 12px;
   border-color: transparent;
-}
-
-.btnNext > span {
-  width: 43px;
-  height: 27px;
-  margin: auto;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 27px;
-
-  color: #ffffff;
 }
 
 .incorrect {
@@ -122,11 +101,9 @@ header {
   color: white;
 }
 
-.img {
+.question > .img {
   width: 84px;
-  height: 54px;
-  margin-top: 68px;
-  margin-left: 32px;
+  vertical-align: middle;
 
   filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.1));
   border-radius: 4px;
@@ -217,7 +194,7 @@ header {
 }
 
 .dataName {
-  margin-left: 40px;
+  margin: 0 18px 0 40px;
   font-size: 18px;
   text-align: left;
   width: 100%;
@@ -225,6 +202,13 @@ header {
 }
 
 .material-icons {
-  margin-left: 18px;
   font-size: 20px;
+}
+
+.quizWrapper {
+  padding: 32px;
+}
+
+.quizContainer > div {
+  padding-top: 32px;
 }

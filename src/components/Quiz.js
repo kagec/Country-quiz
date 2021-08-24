@@ -6,17 +6,15 @@ import AdventureIcon from "../image/undraw_adventure_4hum 1.svg";
 
 const QUIZ_LIST = {
   FlagBelongTo: ({ choseCountry, correctNumber }) => (
-    <div>
+    <div className="question">
       <img src={choseCountry[correctNumber].flag} alt="flag" className="img" />
-      <h1 className="question questionFlagBelongTo">
-        Which country does this flag belong to?
-      </h1>
+      <h1>Which country does this flag belong to?</h1>
     </div>
   ),
   CityIsCapitalOf: ({ choseCountry, correctNumber }) => (
-    <h1 className="question questionCapitalOf">
-      {choseCountry[correctNumber].capital} is the capital of
-    </h1>
+    <div className="question">
+      <h1>{choseCountry[correctNumber].capital} is the capital of</h1>
+    </div>
   ),
 };
 
@@ -54,25 +52,33 @@ const Quiz = ({ countryDatas }) => {
     setQuestionType(QUIZ_NAME[getRandomInt(QUIZ_LENGTH)]);
   };
 
-  return showResult ? (
-    <Result scoreCount={scoreCount} initialize={initialize} />
-  ) : (
-    <div>
-      <img className="advIcon" src={AdventureIcon} alt="Icon" />
+  return (
+    <div className="quizWrapper">
+      {showResult ? (
+        <Result scoreCount={scoreCount} initialize={initialize} />
+      ) : (
+        <div className="quizContainer">
+          <img className="advIcon" src={AdventureIcon} alt="Icon" />
 
-      {QUIZ_LIST[questionType]({ choseCountry, correctNumber })}
-      <ol className="answerList">
-        <AnswerList
-          countryDatas={choseCountry}
-          correctNumber={correctNumber}
-          setAnswerIndex={setAnswerIndex}
-          answerIndex={answerIndex}
-        />
-      </ol>
-      {answerIndex !== null && (
-        <button className="btn btnNext" onClick={onClick}>
-          <span>Next</span>
-        </button>
+          <div>{QUIZ_LIST[questionType]({ choseCountry, correctNumber })}</div>
+          <div>
+            <ol className="answerList">
+              <AnswerList
+                countryDatas={choseCountry}
+                correctNumber={correctNumber}
+                setAnswerIndex={setAnswerIndex}
+                answerIndex={answerIndex}
+              />
+            </ol>
+          </div>
+          <div>
+            {answerIndex !== null && (
+              <button className="btn btnNext" onClick={onClick}>
+                Next
+              </button>
+            )}
+          </div>
+        </div>
       )}
     </div>
   );
