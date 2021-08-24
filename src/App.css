@@ -118,43 +118,43 @@ header {
   right: 20px;
 }
 
-.ly_result {
+.result {
   text-align: center;
   color: #1d355d;
   line-height: 1.5;
 }
 
-.ly_result > div {
+.result > div {
   padding-top: 18px;
 }
 
-.ly_result > div:not(:first-child) {
+.result > div:not(:first-child) {
   padding-top: 72px;
 }
 
-.ly_result > div > img {
+.result > div > img {
   vertical-align: middle;
   width: 238px;
 }
 
-.ly_result > .score > h2 {
+.result > .score > h2 {
   font-weight: 700;
   font-size: 48px;
   margin: 0;
 }
 
-.ly_result > .score > p {
+.result > .score > p {
   font-size: 18px;
   margin: 0;
 }
 
-.ly_result > .score > p > span {
+.result > .score > p > span {
   font-size: 36px;
   font-weight: 700;
   color: rgb(135, 205, 155);
 }
 
-.btn-tryAgain {
+.btnTryAgain {
   width: 209px;
   border: 2px solid #1d355d;
   font-weight: 600;
@@ -162,7 +162,7 @@ header {
   color: #1d355d;
 }
 
-.btn-tryAgain > span {
+.btnTryAgain > span {
   width: 87px;
   height: 27px;
   margin: auto;

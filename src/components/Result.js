@@ -2,7 +2,7 @@ import ResultIcon from "../image/undraw_winners_ao2o 2.svg";
 
 const Result = ({ scoreCount, initialize }) => {
   return (
-    <div className="ly_result">
+    <div className="result">
       <div>
         <img src={ResultIcon} alt="Result Icon" />
       </div>
@@ -13,7 +13,7 @@ const Result = ({ scoreCount, initialize }) => {
         </p>
       </div>
       <div>
-        <button className="btn btn-tryAgain" onClick={() => initialize()}>
+        <button className="btn btnTryAgain" onClick={() => initialize()}>
           <span>Try again</span>
         </button>
       </div>
