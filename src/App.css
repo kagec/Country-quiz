@@ -128,6 +128,10 @@ header {
   padding-top: 18px;
 }
 
+.ly_result > div:not(:first-child) {
+  padding-top: 72px;
+}
+
 .btn-tryAgain {
   width: 209px;
   height: 62px;
