@@ -14,9 +14,11 @@ const QUIZ_LIST = {
     </div>
   ),
   CityIsCapitalOf: ({ choseCountry, correctNumber }) => (
-    <h1 className="question questionCapitalOf">
-      {choseCountry[correctNumber].capital} is the capital of
-    </h1>
+    <div>
+      <h1 className="question questionCapitalOf">
+        {choseCountry[correctNumber].capital} is the capital of
+      </h1>
+    </div>
   ),
 };
 
