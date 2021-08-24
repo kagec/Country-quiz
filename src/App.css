@@ -232,3 +232,7 @@ header {
 .quizWrapper {
   padding: 32px;
 }
+
+.quizContainer > div {
+  padding-top: 32px;
+}
