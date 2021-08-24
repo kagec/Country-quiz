@@ -137,6 +137,12 @@ header {
   width: 238px;
 }
 
+.ly_result > .score > h2 {
+  font-weight: 700;
+  font-size: 48px;
+  margin: 0;
+}
+
 .btn-tryAgain {
   width: 209px;
   height: 62px;
