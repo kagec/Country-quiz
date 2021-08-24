@@ -59,7 +59,7 @@ const Quiz = ({ countryDatas }) => {
       {showResult ? (
         <Result scoreCount={scoreCount} initialize={initialize} />
       ) : (
-        <div>
+        <div className="quizContainer">
           <img className="advIcon" src={AdventureIcon} alt="Icon" />
 
           {QUIZ_LIST[questionType]({ choseCountry, correctNumber })}
