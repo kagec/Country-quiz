@@ -62,20 +62,22 @@ const Quiz = ({ countryDatas }) => {
         <div className="quizContainer">
           <img className="advIcon" src={AdventureIcon} alt="Icon" />
 
-          {QUIZ_LIST[questionType]({ choseCountry, correctNumber })}
-          <ol className="answerList">
-            <AnswerList
-              countryDatas={choseCountry}
-              correctNumber={correctNumber}
-              setAnswerIndex={setAnswerIndex}
-              answerIndex={answerIndex}
-            />
-          </ol>
-          {answerIndex !== null && (
-            <button className="btn btnNext" onClick={onClick}>
-              <span>Next</span>
-            </button>
-          )}
+          <div>
+            {QUIZ_LIST[questionType]({ choseCountry, correctNumber })}
+            <ol className="answerList">
+              <AnswerList
+                countryDatas={choseCountry}
+                correctNumber={correctNumber}
+                setAnswerIndex={setAnswerIndex}
+                answerIndex={answerIndex}
+              />
+            </ol>
+            {answerIndex !== null && (
+              <button className="btn btnNext" onClick={onClick}>
+                <span>Next</span>
+              </button>
+            )}
+          </div>
         </div>
       )}
     </div>
