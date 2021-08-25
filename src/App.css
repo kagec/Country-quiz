@@ -163,20 +163,6 @@ header {
   padding: 18px 60px 17px 60px;
 }
 
-.btnTryAgain > span {
-  width: 87px;
-  height: 27px;
-  margin: auto;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 27px;
-
-  color: #1d355d;
-}
-
 .alphabetIndex {
   font-size: 24px;
 }
