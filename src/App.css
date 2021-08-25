@@ -1,7 +1,6 @@
 header {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.5;
   color: #f2f2f2;
 }
 
@@ -17,7 +16,6 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
 }
 
 .answerList > li:not(:first-child) {
@@ -33,7 +31,6 @@ header {
 }
 
 .question {
-  line-height: 1.5;
   color: #2f527b;
 }
 
@@ -58,7 +55,8 @@ header {
   margin: 0;
   padding: 0;
   justify-content: center;
-  line-height: 1.5;
+  font-family: var(--base-font);
+  line-height: var(--base-line-height);
 }
 
 .btn:hover {
@@ -121,7 +119,6 @@ header {
 .result {
   text-align: center;
   color: #1d355d;
-  line-height: 1.5;
 }
 
 .result > div {
