@@ -125,11 +125,11 @@ header {
 }
 
 .result > div {
-  padding-top: 18px;
+  margin-top: 18px;
 }
 
 .result > div:not(:first-child) {
-  padding-top: 72px;
+  margin-top: 72px;
 }
 
 .result > div > img {
@@ -184,7 +184,7 @@ header {
 }
 
 .quizContainer > div {
-  padding-top: 32px;
+  margin-top: 32px;
 }
 
 .footer {
