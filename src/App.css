@@ -7,7 +7,7 @@ header {
 }
 
 .quizApp {
-  width: 464px;
+  position: relative;
   padding-bottom: 32px;
   background: #ffffff;
   border-radius: 24px;
