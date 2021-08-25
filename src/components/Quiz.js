@@ -71,7 +71,7 @@ const Quiz = ({ countryDatas }) => {
               />
             </ol>
           </div>
-          <div>
+          <div className="footer">
             {answerIndex !== null && (
               <button className="btn btnNext" onClick={onClick}>
                 Next
