@@ -14,7 +14,7 @@ const Result = ({ scoreCount, initialize }) => {
       </div>
       <div>
         <button className="btn btnTryAgain" onClick={() => initialize()}>
-          <span>Try again</span>
+          Try again
         </button>
       </div>
     </div>
