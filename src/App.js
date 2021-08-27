@@ -1,5 +1,6 @@
 import "./App.css";
 import CountryQuiz from "./components/CountryQuiz";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <div className="container">
       <Header />
       <CountryQuiz />
+      <Footer />
     </div>
   );
 };
