@@ -18,50 +18,6 @@
   right: 20px;
 }
 
-.result {
-  text-align: center;
-  color: #1d355d;
-}
-
-.result > div {
-  margin-top: 18px;
-}
-
-.result > div:not(:first-child) {
-  margin-top: 72px;
-}
-
-.result > div > img {
-  vertical-align: middle;
-  width: 238px;
-}
-
-.result > .score > h2 {
-  font-weight: 700;
-  font-size: 48px;
-  margin: 0;
-}
-
-.result > .score > p {
-  font-size: 18px;
-  margin: 0;
-}
-
-.result > .score > p > span {
-  font-size: 36px;
-  font-weight: 700;
-  color: rgb(135, 205, 155);
-}
-
-.btnTryAgain {
-  width: 209px;
-  border: 2px solid #1d355d;
-  font-weight: 600;
-  font-size: 18px;
-  color: #1d355d;
-  padding: 16px 0;
-}
-
 .alphabetIndex {
   font-size: 24px;
 }
