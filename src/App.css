@@ -1,78 +1,7 @@
-.answerList {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.answerList > li:not(:first-child) {
-  margin-top: 32px;
-}
-
-.advIcon {
-  position: absolute;
-  width: 162px;
-  height: 116px;
-  top: -74px;
-  right: 0;
-}
-
-.question {
-  color: #2f527b;
-}
-
-.question > h1 {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.question > h1:not(:first-child) {
-  margin-top: 20px;
-}
-
-.btn {
-  display: inline-flex;
-  width: 120px;
-  background: #ffffff;
-  border: 2px solid rgba(96, 102, 208, 0.7);
-  border-radius: 12px;
-  color: rgba(96, 102, 208, 0.8);
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  font-family: var(--base-font);
-  line-height: var(--base-line-height);
-}
-
-.btn:hover {
-  cursor: pointer;
-}
-
 .btnAnswer {
   width: 100%;
   padding: 10px 18px;
   font-weight: 500;
-}
-
-.btn:hover {
-  background: #f9a826;
-  color: white;
-  border-color: transparent;
-}
-
-.btnNext {
-  width: 116px;
-  margin-left: auto;
-  padding: 14px 0;
-  font-weight: 700;
-  font-size: 18px;
-  color: #fff;
-
-  background: #f9a826;
-  box-shadow: 0px 2px 4px rgba(252, 168, 47, 0.4);
-  border-radius: 12px;
-  border-color: transparent;
 }
 
 .incorrect {
@@ -83,14 +12,6 @@
 .correct {
   background-color: #60bf88 !important ;
   color: white;
-}
-
-.question > .img {
-  width: 84px;
-  vertical-align: middle;
-
-  filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.1));
-  border-radius: 4px;
 }
 
 .icon {
@@ -155,18 +76,6 @@
 
 .material-icons {
   font-size: 20px;
-}
-
-.quizWrapper {
-  padding: 32px;
-}
-
-.quizContainer > div {
-  margin-top: 32px;
-}
-
-.footer {
-  text-align: right;
 }
 
 footer {
