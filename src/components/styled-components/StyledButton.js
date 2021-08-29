@@ -20,6 +20,16 @@ export const Button = styled.button`
     color: white;
     border-color: transparent;
   }
+
+  &.incorrect {
+    background: #ea8282 !important;
+    color: white;
+  }
+
+  &.correct {
+    background-color: #60bf88 !important ;
+    color: white;
+  }
 `;
 
 export const NextButton = styled(Button)`
