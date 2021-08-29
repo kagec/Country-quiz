@@ -1,3 +1,6 @@
+import styled from "styled-components";
+import { AnswerButton } from "./styled-components/StyledButton";
+
 const ALPHABET_INDEX = "ABCD";
 
 const AnswerList = ({
@@ -8,11 +11,10 @@ const AnswerList = ({
 }) => {
   return countryDatas.map((data, index) => (
     <li key={index}>
-      <button
-        className={`btn btnAnswer 
+      <AnswerButton
+        className={`
         ${answerIndex !== null && index === correctNumber ? "correct" : ""}
         ${answerIndex === index ? "incorrect" : ""}
-
          `}
         onClick={() => {
           if (answerIndex === null) {
@@ -20,19 +22,39 @@ const AnswerList = ({
           }
         }}
       >
-        <span className="alphabetIndex">{ALPHABET_INDEX[index]}</span>
-        <span className="dataName">{data.name}</span>
+        <AlphabetIndex>{ALPHABET_INDEX[index]}</AlphabetIndex>
+        <DataName>{data.name}</DataName>
         {answerIndex !== null &&
         answerIndex === index &&
         !(index === correctNumber) ? (
-          <span className="material-icons">highlight_off</span>
+          <MaterialIcons className="material-icons">
+            highlight_off
+          </MaterialIcons>
         ) : null}
         {answerIndex !== null && index === correctNumber ? (
-          <span className="material-icons">check_circle_outline</span>
+          <MaterialIcons className="material-icons">
+            check_circle_outline
+          </MaterialIcons>
         ) : null}
-      </button>
+      </AnswerButton>
     </li>
   ));
 };
+
+const AlphabetIndex = styled.span`
+  font-size: 24px;
+`;
+
+const DataName = styled.span`
+  margin: 0 18px 0 40px;
+  font-size: 18px;
+  text-align: left;
+  width: 100%;
+  word-break: break-word;
+`;
+
+const MaterialIcons = styled.span`
+  font-size: 20px;
+`;
 
 export default AnswerList;
