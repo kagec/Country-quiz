@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import "./App.css";
 import CountryQuiz from "./components/CountryQuiz";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
