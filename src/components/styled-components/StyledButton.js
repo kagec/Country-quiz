@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   display: inline-flex;
-  width: 120px;
-  background: #ffffff;
+  background: #fff;
   border: 2px solid rgba(96, 102, 208, 0.7);
   border-radius: 12px;
   color: rgba(96, 102, 208, 0.8);
@@ -13,22 +12,13 @@ export const Button = styled.button`
   justify-content: center;
   font-family: var(--base-font);
   line-height: var(--base-line-height);
+  font-size: 18px;
 
-  &:hover {
+  &:hover:not(:disabled) {
     cursor: pointer;
     background: #f9a826;
-    color: white;
+    color: #fff;
     border-color: transparent;
-  }
-
-  &.incorrect {
-    background: #ea8282 !important;
-    color: white;
-  }
-
-  &.correct {
-    background-color: #60bf88 !important ;
-    color: white;
   }
 `;
 
