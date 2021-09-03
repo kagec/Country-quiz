@@ -44,9 +44,3 @@ export const TryAgainButton = styled(Button)`
   color: #1d355d;
   padding: 16px 0;
 `;
-
-export const AnswerButton = styled(Button)`
-  width: 100%;
-  padding: 10px 18px;
-  font-weight: 500;
-`;

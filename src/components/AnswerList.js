@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { AnswerButton } from "./styled-components/StyledButton";
+import styled, { css } from "styled-components";
+import { Button } from "./styled-components/StyledButton";
 
 const ALPHABET_INDEX = "ABCD";
 
@@ -12,15 +12,14 @@ const AnswerList = ({
   return countryDatas.map((data, index) => (
     <li key={index}>
       <AnswerButton
-        className={`
-        ${answerIndex !== null && index === correctNumber ? "correct" : ""}
-        ${answerIndex === index ? "incorrect" : ""}
-         `}
         onClick={() => {
           if (answerIndex === null) {
             setAnswerIndex(index);
           }
         }}
+        correct={answerIndex != null && index === correctNumber}
+        selected={answerIndex === index}
+        disabled={answerIndex != null}
       >
         <AlphabetIndex>{ALPHABET_INDEX[index]}</AlphabetIndex>
         <DataName>{data.name}</DataName>
@@ -47,7 +46,6 @@ const AlphabetIndex = styled.span`
 
 const DataName = styled.span`
   margin: 0 18px 0 40px;
-  font-size: 18px;
   text-align: left;
   width: 100%;
   word-break: break-word;
@@ -55,6 +53,32 @@ const DataName = styled.span`
 
 const MaterialIcons = styled.span`
   font-size: 20px;
+`;
+
+const AnswerButton = styled(Button)`
+  width: 100%;
+  padding: 10px 18px;
+  font-weight: 500;
+
+  ${({ selected, correct }) => css`
+    ${correct &&
+    `
+      background: #60bf88;
+      border-color: #60bf88;
+    `}
+
+    ${!correct &&
+    selected &&
+    `
+      background: #ea8282;
+      border-color: #ea8282;
+    `}
+
+    ${(correct || selected) &&
+    `
+      color: #fff;
+    `}
+  `}
 `;
 
 export default AnswerList;
