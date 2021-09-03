@@ -54,14 +54,14 @@ const CountryQuiz = () => {
 
 const QuizApp = styled.div`
   position: relative;
-  background: #ffffff;
+  background: #fff;
   border-radius: 24px;
   margin-top: 10px;
 `;
 
 const Load = styled.div`
   text-align: center;
-  font-size: x-large;
+  font-size: 24px;
 `;
 
 export default CountryQuiz;
