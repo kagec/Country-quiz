@@ -21,12 +21,3 @@ export const Button = styled.button`
     border-color: transparent;
   }
 `;
-
-export const TryAgainButton = styled(Button)`
-  width: 209px;
-  border: 2px solid #1d355d;
-  font-weight: 600;
-  font-size: 18px;
-  color: #1d355d;
-  padding: 16px 0;
-`;
