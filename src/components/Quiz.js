@@ -4,12 +4,12 @@ import { chooseCountry, getRandomInt } from "./CountryQuiz";
 import Result from "./Result";
 import AdventureIcon from "../image/undraw_adventure_4hum 1.svg";
 import styled from "styled-components";
-import { NextButton } from "./styled-components/StyledButton";
+import { Button } from "./styled-components/StyledButton";
 
 const QUIZ_LIST = {
   FlagBelongTo: ({ choseCountry, correctNumber }) => (
     <Question>
-      <img src={choseCountry[correctNumber].flag} alt="flag" className="img" />
+      <img src={choseCountry[correctNumber].flag} alt="flag" />
       <h1>Which country does this flag belong to?</h1>
     </Question>
   ),
@@ -123,19 +123,30 @@ const Question = styled.div`
     font-size: 24px;
     font-weight: 700;
     margin: 0;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
   }
 
-  > h1:not(:first-child) {
-    margin-top: 20px;
-  }
-
-  > .img {
+  > img {
     width: 84px;
     vertical-align: middle;
-
     filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.1));
     border-radius: 4px;
   }
+`;
+
+const NextButton = styled(Button)`
+  width: 116px;
+  margin-left: auto;
+  padding: 14px 0;
+  font-weight: 700;
+  color: #fff;
+
+  background: #f9a826;
+  box-shadow: 0px 2px 4px rgba(252, 168, 47, 0.4);
+  border-color: transparent;
 `;
 
 export default Quiz;

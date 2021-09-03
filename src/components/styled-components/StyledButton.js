@@ -22,20 +22,6 @@ export const Button = styled.button`
   }
 `;
 
-export const NextButton = styled(Button)`
-  width: 116px;
-  margin-left: auto;
-  padding: 14px 0;
-  font-weight: 700;
-  font-size: 18px;
-  color: #fff;
-
-  background: #f9a826;
-  box-shadow: 0px 2px 4px rgba(252, 168, 47, 0.4);
-  border-radius: 12px;
-  border-color: transparent;
-`;
-
 export const TryAgainButton = styled(Button)`
   width: 209px;
   border: 2px solid #1d355d;
