@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import styled from "styled-components";
 import Quiz from "./Quiz";
 
 export const getRandomInt = (max) => {
@@ -41,14 +42,26 @@ const CountryQuiz = () => {
   }, []);
 
   return (
-    <div className="quizApp">
+    <QuizApp>
       {countryData === null ? (
-        <div className="load">Loading...</div>
+        <Load>Loading...</Load>
       ) : (
         <Quiz countryDatas={countryData} />
       )}
-    </div>
+    </QuizApp>
   );
 };
+
+const QuizApp = styled.div`
+  position: relative;
+  background: #fff;
+  border-radius: 24px;
+  margin-top: 10px;
+`;
+
+const Load = styled.div`
+  text-align: center;
+  font-size: 24px;
+`;
 
 export default CountryQuiz;
